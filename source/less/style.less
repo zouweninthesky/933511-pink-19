@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Bold"), url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Light"), url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+  font-weight: lighter;
+}
+@main-font:#000000;
+@secondary-bg:#f2f2f2;
+@main-bg:#ffffff;
+@menu:#283645;
+@download:#17212d;
+@accent: #d22856;
+
+body {
+  margin: 0 auto;
+  background-color: @main-bg;
+  color: @main-font;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  font-kerning: none;
+  font-family: "Open Sans", Arial, sans-serif;
+  width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: @main-font;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+
+@import "advantages.less";
+
+@import "button.less";
+
+@import "contacts.less";
+
+@import "contest-form.less";
+
+@import "download.less";
+
+@import "error.less";
+
+@import "footer-logo.less";
+
+@import "gallery.less";
+
+@import "intro.less";
+
+@import "main-nav.less";
+
+@import "page-footer.less";
+
+@import "page-header.less";
+
+@import "page-main.less";
+
+@import "post.less";
+
+@import "purchase.less";
+
+@import "reviews.less";
+
+@import "slider.less";
+
+@import "social.less";
+
+@import "successful-submit.less";
+
+@import "upload.less";

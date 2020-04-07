@@ -1,0 +1,81 @@
+.main-nav {
+  position: relative;
+  background-color: @menu;
+  &__wrapper {
+    padding: 53px 0 16px;
+    box-shadow: 0px 1px 0 0 @main-font;
+  }
+  &__logo {
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    &:hover .main-nav__logo-image {
+      fill: @accent;
+    }
+    &:active .main-nav__logo-image {
+      opacity: 0.3;
+      fill: @main-bg;
+    }
+  }
+  &__toggle {
+    font-size: 0px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    padding: 0;
+    right: 49px;
+    top: 32px;
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 4px;
+      background-color: @main-bg;
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
+    &:hover::after,
+    &:hover::before {
+      background-color: @accent;
+    }
+    &:active::after,
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    padding: 15px 0 16px;
+    box-shadow: 0px 1px 0 0 @main-font, inset 0px 1px 0 0 fadeout(@main-bg, 85%);
+    & a {
+      display: block;
+      color: @main-bg;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 32px;
+      text-transform: uppercase;
+      &:hover {
+        color: @accent;
+      }
+      &:active {
+        color: fadeout(@accent, 70%);
+      }
+      &--current {
+
+      }
+    }
+  }
+  &__link {
+
+  }
+}

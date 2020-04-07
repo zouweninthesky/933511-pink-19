@@ -1,0 +1,24 @@
+.social {
+
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: solid 3px fadeout(@menu, 90%);
+    &:hover {
+      border-color: @menu;
+    }
+    &:active {
+      border-color: fadeout(@menu, 90%);
+      & .social__icon {
+        fill: fadeout(@accent, 70%);
+      }
+    }
+  }
+}
