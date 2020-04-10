@@ -24,19 +24,64 @@
 }
 
 .contest-form__text-input {
+  width: 256px;
   font-family: inherit;
+  color: @menu;
+  font-size: 18px;
+  padding: 12px 0;
+  padding-left: 20px;
+  border: 2px solid @border;
+
+  &:hover {
+    border-color: @menu;
+  }
+
+  &:active {
+    border-color: @accent;
+  }
 }
 
 .contest-form__achievements {
   border: none;
+  background-color: @secondary-bg;
 }
 
 .contest-form__checkbox {
+  display: none;
 
+  & + .contest-form__checkbox-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background-color: @main-bg;
+  border: 2px solid @border;
+  }
+
+  &:checked + .contest-form__checkbox-label::before {
+    background-image: url("../../img/icon-checked.svg");
+    background-position: 6px 10px;
+    background-repeat: no-repeat;
+  }
+
+  &:hover + .contest-form__checkbox-label::before,
+  :checked:hover + .contest-form__checkbox-label::before {
+    border-color: @menu;
+  }
+
+  &:active + .contest-form__checkbox-label::before,
+  :checked:active + .contest-form__checkbox-label::before {
+    border-color: @accent;
+  }
 }
 
 .contest-form__checkbox-label {
-
+  font-size: 18px;
+  line-height: 30px;
+  color: @menu;
+  position: relative;
 }
 
 .contest-form__contacts {
@@ -45,6 +90,40 @@
 
 .contest-form__app-used {
   border: none;
+  background-color: @secondary-bg;
+}
+
+.contest-form__radio {
+  display: none;
+
+  & + .contest-form__checkbox-label::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -60px;
+    width: 15px;
+    height: 15px;
+    background-color: @main-bg;
+    border: 9px solid @main-bg;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px @border;
+  }
+
+  &:checked + .contest-form__checkbox-label::before {
+    background-color: @accent;
+  }
+
+  &:hover + .contest-form__checkbox-label::before,
+  :checked:hover + .contest-form__checkbox-label::before {
+    box-shadow: 0 0 0 2px @menu;
+  }
+
+  &:active + .contest-form__checkbox-label::before,
+  :checked:active + .contest-form__checkbox-label::before {
+    box-shadow: 0 0 0 2px @accent;
+  }
+
+
 }
 
 .contest-form__describe {
@@ -53,14 +132,27 @@
 
 .contest-form__textarea-input {
   font-family: inherit;
+  border: 2px solid @border;
 }
 
 .contest-form__submit {
-
+  font-size: 18px;
+  color: @main-bg;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 276px;
+  height: 59px;
+  border: solid 2px @form-button;
+  border-radius: 2px;
+  background-color: @form-button;
 }
 
 .contest-form__hint {
-  &--star {
+  line-height: 30px;
+  color: @menu;
+  text-transform: uppercase;
 
+  &--star {
+    color: @accent;
   }
 }

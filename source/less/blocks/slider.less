@@ -1,3 +1,27 @@
 .slider {
 
 }
+
+.slider__dot {
+  margin: 0 9px;
+  width: 1px;
+  height: 1px;
+  line-height: 0;
+  padding: 0;
+  border: 2px solid fade(@menu, 30%);
+  border-radius: 2px;
+
+  &:not(.slider__dot--current):hover {
+    border-color: fade(@menu, 60%);
+  }
+
+  &:not(.slider__dot--current):active {
+    border-color: fade(@menu, 10%);
+  }
+
+  &--current {
+    border-color: @main-bg;
+    box-shadow: 0 0 0 2px @menu;
+  }
+}
+

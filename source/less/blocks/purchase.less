@@ -1,33 +1,93 @@
 .purchase {
   background: url("../img/bg-triangle-white.svg") no-repeat;
+  background-color: @secondary-bg;
+  padding-top: 127px;
+  padding-bottom: 48px;
 }
 
 .purchase__table {
-
+  position: absolute;
+  left: 50%;
+  margin-left: -457px;
+  border-collapse: collapse;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin-bottom: 25px;
 }
 
 .purchase__row {
-
+  background-color: @main-bg;
 }
 
 .purchase__name {
+  background-color: @menu;
+  font-weight: bold;
+  color: @main-bg;
+  font-size: 18px;
+  border-left: 2px solid @border;
+  border-right: 2px solid @border;
 
-}
+  &--best {
+    position: relative;
 
-.purchase__price {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 74px;
+      height: 74px;
+      top: 0;
+      left: -2px;
+      background: url("../../img/bg-hit.svg") no-repeat;
+    }
 
-}
-
-.purchase__content {
-
-}
-
-.purchase__included {
-  &--not-included {
-
+    &::after {
+      font-weight: normal;
+      position: absolute;
+      content: "ХИТ";
+      line-height: 21px;
+      font-size: 10px;
+      top: 15px;
+      left: 10px;
+      transform: rotate(-45deg);
+    }
   }
 }
 
-.purchase__dot {
+.purchase__price {
+  background-color: @menu;
+  color: @main-bg;
+  font-size: 24px;
+  border-left: 2px solid @border;
+  border-right: 2px solid @border;
+  border-bottom: 2px solid @border;
+}
 
+.purchase__content {
+  text-align: left;
+  padding-left: 22px;
+  color: @menu;
+  border-right: none;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-left: 2px solid @border;
+  border-bottom: 2px solid @border;
+  width: 236px;
+}
+
+.purchase__included {
+  text-align: left;
+  font-size: 0;
+  border-left: none;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-right: 2px solid @border;
+  border-bottom: 2px solid @border;
+  width: 40px;
+  background: url("../../img/icon-included.svg") no-repeat;
+  background-position: 5px 24px;
+
+  &--not-included {
+    background: url("../../img/icon-included-not.svg") no-repeat;
+    background-position: 0 20px;
+  }
 }

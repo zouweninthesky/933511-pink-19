@@ -13,10 +13,10 @@
           <button class="main-nav__toggle visually-hidden">Открыть/закрыть меню</button>
         </div>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current"><a>Главная </a></li>
-          <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-          <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-          <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--current">Главная </a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
         <div class="intro">
           <p class="intro__slogan">Взгляните на жизнь иначе!</p>
@@ -65,12 +65,17 @@
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </li>
         </ul>
+        <div class="slider__dot-section">
+          <button type="button" class="slider__dot slider__dot--current"></button>
+          <button type="button" class="slider__dot"></button>
+          <button type="button" class="slider__dot"></button>
+        </div>
       </section>
       <section class="purchase slider">
         <table class="purchase__table">
           <tr class="purchase__row">
             <th colspan="2" class="purchase__name">???</th>
-            <th colspan="2" class="purchase__name">Стандарт</th>
+            <th colspan="2" class="purchase__name purchase__name--best">Стандарт</th>
             <th colspan="2" class="purchase__name">???</th>
           </tr>
           <tr class="purchase__row">
@@ -80,33 +85,33 @@
           </tr>
           <tr class="purchase__row">
             <td class="purchase__content">Розовый фильтр</td>
-            <td class="purchase__included"></td>
+            <td class="purchase__included">Входит</td>
             <td class="purchase__content">Розовый фильтр</td>
-            <td class="purchase__included purchase__included--not-included"></td>
+            <td class="purchase__included">Входит</td>
             <td class="purchase__content">Розовый фильтр</td>
-            <td class="purchase__included purchase__included--not-included"></td>
+            <td class="purchase__included">Входит</td>
           </tr>
           <tr class="purchase__row">
             <td class="purchase__content">Смайлики</td>
-            <td class="purchase__included"></td>
+            <td class="purchase__included purchase__included--not-included">Не входит</td>
             <td class="purchase__content">Смайлики</td>
-            <td class="purchase__included"></td>
+            <td class="purchase__included">Входит</td>
             <td class="purchase__content">Смайлики</td>
-            <td class="purchase__included purchase__included--not-included"></td>
+            <td class="purchase__included">Входит</td>
           </tr>
           <tr class="purchase__row">
             <td class="purchase__content">Комментарии</td>
-            <td class="purchase__included"></td>
+            <td class="purchase__included purchase__included--not-included">Не входит</td>
             <td class="purchase__content">Комментарии</td>
-            <td class="purchase__included"></td>
+            <td class="purchase__included purchase__included--not-included">Не входит</td>
             <td class="purchase__content">Комментарии</td>
-            <td class="purchase__included"></td>
+            <td class="purchase__included">Входит</td>
           </tr>
         </table>
-        <div>
-          <button type="button" class="purchase__dot"></button>
-          <button type="button" class="purchase__dot"></button>
-          <button type="button" class="purchase__dot"></button>
+        <div class="slider__dot-section">
+          <button type="button" class="slider__dot"></button>
+          <button type="button" class="slider__dot slider__dot--current"></button>
+          <button type="button" class="slider__dot"></button>
         </div>
       </section>
       <section class="contacts">

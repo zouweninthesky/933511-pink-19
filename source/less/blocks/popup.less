@@ -1,0 +1,47 @@
+.popup {
+  background-color: @main-bg;
+  box-shadow: 0 7px 15px 0 fade(#000101, 15%);
+  padding: 46px 0 0;
+}
+
+.popup__title {
+  font-size: 18px;
+}
+
+.popup__description {
+  color: @menu;
+  padding: 0 24px;
+}
+
+.popup__button-wrapper {
+  padding: 48px 20px 52px;
+  background-color: @secondary-bg;
+}
+
+.popup__button {
+  font-size: 18px;
+  color: @main-bg;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 276px;
+  height: 59px;
+  border: solid 2px transparent;
+  border-radius: 2px;
+  background-color: @form-button;
+  margin-bottom: 50px;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: darken(@form-button, 5);
+  }
+
+  &:active {
+    outline: none;
+    color: fade(@main-bg, 30%);
+  }
+
+  &:disabled {
+    background-color: @border;
+  }
+}

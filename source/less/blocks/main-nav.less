@@ -69,30 +69,22 @@
 
 .main-nav__item {
   padding: 15px 0 16px;
-  box-shadow: 0 1px 0 0 @main-font, inset 0 1px 0 0 fadeout(@main-bg, 85%);
-
-  & a {
-    display: block;
-    color: @main-bg;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 32px;
-    text-transform: uppercase;
-
-    &:hover {
-      color: @accent;
-    }
-
-    &:active {
-      color: fadeout(@accent, 70%);
-    }
-
-    &--current {
-
-    }
-  }
+  box-shadow: 0 1px 0 0 @main-font, inset 0 1px 0 0 fade(@main-bg, 15%);
 }
 
 .main-nav__link {
+  display: block;
+  color: @main-bg;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: uppercase;
 
+  &:not(.main-nav__link--current):hover {
+    color: @accent;
+  }
+
+  &:not(.main-nav__link--current):active {
+    color: fade(@accent, 30%);
+  }
 }
