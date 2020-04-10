@@ -3,12 +3,14 @@
   background-color: @secondary-bg;
   padding-top: 127px;
   padding-bottom: 48px;
+  overflow: hidden;
 }
 
 .purchase__table {
-  position: absolute;
+  width: 832px;
+  position: relative;
   left: 50%;
-  margin-left: -457px;
+  transform: translateX(-50%);
   border-collapse: collapse;
   text-transform: uppercase;
   line-height: 30px;
@@ -19,13 +21,12 @@
   background-color: @main-bg;
 }
 
-.purchase__name {
+.purchase__title {
   background-color: @menu;
-  font-weight: bold;
   color: @main-bg;
-  font-size: 18px;
   border-left: 2px solid @border;
   border-right: 2px solid @border;
+  border-bottom: 2px solid @border;
 
   &--best {
     position: relative;
@@ -53,13 +54,17 @@
   }
 }
 
+.purchase__name {
+  display: block;
+  padding-top: 18px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .purchase__price {
-  background-color: @menu;
-  color: @main-bg;
+  display: block;
+  padding-bottom: 18px;
   font-size: 24px;
-  border-left: 2px solid @border;
-  border-right: 2px solid @border;
-  border-bottom: 2px solid @border;
 }
 
 .purchase__content {
@@ -71,7 +76,6 @@
   padding-bottom: 18px;
   border-left: 2px solid @border;
   border-bottom: 2px solid @border;
-  width: 236px;
 }
 
 .purchase__included {

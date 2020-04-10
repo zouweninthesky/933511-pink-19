@@ -50,14 +50,14 @@
   display: none;
 
   & + .contest-form__checkbox-label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 35px;
-  height: 35px;
-  background-color: @main-bg;
-  border: 2px solid @border;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background-color: @main-bg;
+    border: 2px solid @border;
   }
 
   &:checked + .contest-form__checkbox-label::before {
@@ -122,8 +122,6 @@
   :checked:active + .contest-form__checkbox-label::before {
     box-shadow: 0 0 0 2px @accent;
   }
-
-
 }
 
 .contest-form__describe {
