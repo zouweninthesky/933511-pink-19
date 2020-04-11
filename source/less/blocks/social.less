@@ -13,17 +13,17 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  border: solid 3px fadeout(@menu, 90%);
+  border: solid 3px fade(@menu, 10%);
 
   &:hover {
     border-color: @menu;
   }
 
   &:active {
-    border-color: fadeout(@menu, 90%);
+    border-color: fade(@menu, 10%);
 
     & .social__icon {
-      fill: fadeout(@accent, 70%);
+      fill: fade(@accent, 30%);
     }
   }
 }

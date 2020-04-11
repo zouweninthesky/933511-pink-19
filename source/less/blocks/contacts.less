@@ -1,27 +1,59 @@
 .contacts {
-
+  background-color: @main-bg;
+  padding: 0;
+  color: @menu;
 }
 
 .contacts__intro {
-
+  font-size: 24px;
 }
 
 .contacts__label {
-
+  margin: 0;
+  margin-bottom: 11px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 40px;
 }
 
 .contacts__number {
-
+  font-size: 24px;
+  font-weight: lighter;
+  color: @accent;
+  padding: 0 40px;
 }
 
 .contacts__email {
-
+  font-size: 24px;
+  font-weight: lighter;
+  color: @accent;
+  padding: 0 40px;
 }
 
 .contacts__address {
-
+  font-size: 24px;
+  font-weight: lighter;
+  color: @accent;
+  margin: 0;
+  padding: 0 40px 40px;
 }
 
 .contacts__map {
+  min-height: 200px;
+  position: relative;
+  background: url("../img/bg-triangle-white-footer.svg") no-repeat, url("../img/bg-map-mobile@1x.png") no-repeat;
+  background-position: 0 -1px, 0 -445px;
+  background-size: contain, cover;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -18px;
+    margin-top: -6px;
+    height: 36px;
+    width: 36px;
+    background-image: url("../img/icon-map-marker.svg");
+  }
 }
