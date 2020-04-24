@@ -12,3 +12,22 @@
   background: url("../img/bg-back-mobile@1x.jpg");
   background-position: 0 -68px;
 }
+
+@media (min-width: @tablet-width) {
+  .page-header__title {
+    font-size: 50px;
+    line-height: normal;
+    background: url("../img/bg-back-tablet@1x.jpg");
+    background-position: -280px -110px;
+    min-height: 210px;
+    padding: 60px 46px 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__title {
+    padding: 184px 225px 98px;
+    background: url("../img/bg-back-desktop@1x.jpg");
+    background-position: -680px 0;
+  }
+}

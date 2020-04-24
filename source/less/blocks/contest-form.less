@@ -47,8 +47,6 @@
 }
 
 .contest-form__checkbox {
-  display: none;
-
   & + .contest-form__checkbox-label::before {
     content: "";
     position: absolute;
@@ -77,8 +75,6 @@
 }
 
 .contest-form__radio {
-  display: none;
-
   & + .contest-form__checkbox-label::before {
     content: "";
     position: absolute;
@@ -128,9 +124,24 @@
   font-weight: bold;
   width: 276px;
   height: 59px;
-  border: solid 2px @form-button;
+  border: solid 2px transparent;
   border-radius: 2px;
   background-color: @form-button;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: @form-button-2;
+  }
+
+  &:active {
+    outline: none;
+    color: fade(@main-bg, 30%);
+  }
+
+  &:disabled {
+    background-color: @border;
+  }
 }
 
 .contest-form__hint {
@@ -142,3 +153,11 @@
     color: @accent;
   }
 }
+
+/*@media (min-width: @tablet-width) {
+
+}
+
+@media (min-width: @desktop-width) {
+
+}*/

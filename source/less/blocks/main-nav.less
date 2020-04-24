@@ -4,7 +4,7 @@
 }
 
 .main-nav__wrapper {
-  padding: 53px 0 16px;
+  padding: 53px 0 0;
   box-shadow: 0 1px 0 0 @main-font;
 }
 
@@ -86,5 +86,117 @@
 
   &:not(.main-nav__link--current):active {
     color: fade(@accent, 30%);
+  }
+}
+
+.main-nav__download {
+  margin-top: 1px;
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-position: 0 -70px;
+  background-color: @download;
+}
+
+.main-nav__slogan {
+  padding: 28px 40px 33px;
+  margin: 0;
+  color: @main-bg;
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.main-nav__img {
+  display: block;
+}
+
+
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    padding: 109px 0 0;
+  }
+
+  .main-nav__link {
+  }
+
+  .main-nav__download {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: -275px -110px;
+    position: relative;
+  }
+
+  .main-nav__slogan {
+    font-size: 40px;
+    line-height: normal;
+    padding-left: 78px;
+    padding-right: 396px;
+    padding-top: 83px;
+    padding-bottom: 0;
+  }
+
+  .main-nav__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    min-height: 853px;
+    position: absolute;
+    background-color: transparent;
+  }
+
+  .main-nav--index {
+    position: static;
+    background: url("../img/bg-back-desktop@1x.jpg");
+    background-position: -680px 0;
+  }
+
+  .main-nav__wrapper {
+    min-width: 940px;
+    padding: 0 130px;
+    box-shadow: none;
+    min-height: 110px;
+    display: flex;
+    flex-direction: row;
+    background-color: fade(@main-font, 30%);
+  }
+
+  .main-nav__logo {
+    position: static;
+    margin-right: 173px;
+    margin-top: 38px;
+  }
+
+  .main-nav__list {
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__item {
+    padding: 43px 0 43px;
+    box-shadow: none;
+  }
+
+  .main-nav__link {
+    line-height: 18px;
+    font-weight: normal;
+    text-transform: capitalize;
+
+    &:not(.main-nav__link--current):active {
+      color: fade(@main-bg, 30%);
+    }
+  }
+
+  .main-nav__download {
+    background: transparent;
+  }
+
+  .main-nav__slogan {
+    font-size: 50px;
+    line-height: normal;
+    padding-left: 160px;
+    padding-right: 800px;
   }
 }
