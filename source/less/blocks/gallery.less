@@ -3,7 +3,8 @@
 }
 
 .gallery__intro {
-  padding: 40px 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   color: @menu;
   line-height: 30px;
 }
@@ -36,7 +37,6 @@
 
 .gallery__list {
   list-style: none;
-  padding: 0;
 }
 
 .gallery__item {
@@ -48,7 +48,7 @@
 @media (min-width: @tablet-width) {
   .gallery__intro {
     font-size: 18px;
-    padding: 85px 111px 70px;
+    padding: 85px 0 70px;
   }
 
   .gallery__best-img {
@@ -73,7 +73,7 @@
 
 @media (min-width: @desktop-width) {
   .gallery__intro {
-    padding: 100px 316px 92px;
+    padding: 100px 0 92px;
   }
 
   .gallery__best-post {
@@ -83,14 +83,12 @@
   }
 
   .gallery__list {
-    width: 100%;
-    padding: 0 130px;
+    justify-content: space-between;
   }
 
   .gallery__item {
     width: 300px;
     margin: 0;
-    margin-right: 20px;
     margin-bottom: 54px;
   }
 }

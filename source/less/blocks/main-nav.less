@@ -91,17 +91,21 @@
 
 .main-nav__download {
   margin-top: 1px;
-  background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background: url("../img/bg-back-mobile@1x.jpg") repeat-x;
   background-position: 0 -70px;
   background-color: @download;
 }
 
 .main-nav__slogan {
-  padding: 28px 40px 33px;
-  margin: 0;
+  box-sizing: border-box;
+  width: 320px;
+  padding: 28px 45px 33px;
+  padding-top: 28px;
+  padding-bottom: 33px;
   color: @main-bg;
   font-size: 24px;
   font-weight: lighter;
+  margin: 0 auto;
 }
 
 .main-nav__img {
@@ -126,10 +130,8 @@
   .main-nav__slogan {
     font-size: 40px;
     line-height: normal;
-    padding-left: 78px;
-    padding-right: 396px;
-    padding-top: 83px;
-    padding-bottom: 0;
+    width: 660px;
+    padding: 83px 396px 0 78px;
   }
 
   .main-nav__img {
@@ -141,25 +143,32 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    min-height: 853px;
+    width: 100%;
     position: absolute;
-    background-color: transparent;
+    background-color: fade(@main-font, 30%);
   }
 
   .main-nav--index {
+    left: 0;
+    margin-left: 0;
+    min-height: 853px;
     position: static;
     background: url("../img/bg-back-desktop@1x.jpg");
     background-position: -680px 0;
   }
 
+  .main-nav__index-wrapper {
+    background-color: fade(@main-font, 30%);
+  }
+
   .main-nav__wrapper {
-    min-width: 940px;
+    width: 700px;
     padding: 0 130px;
     box-shadow: none;
+    margin: 0 auto;
     min-height: 110px;
     display: flex;
     flex-direction: row;
-    background-color: fade(@main-font, 30%);
   }
 
   .main-nav__logo {
@@ -194,9 +203,10 @@
   }
 
   .main-nav__slogan {
+    width: 960px;
     font-size: 50px;
     line-height: normal;
-    padding-left: 160px;
-    padding-right: 800px;
+    padding-left: 60px;
+    padding-right: 600px;
   }
 }
