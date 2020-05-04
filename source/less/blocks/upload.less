@@ -5,21 +5,18 @@
 .upload__intro {
   background-color: @main-bg;
   padding: 48px 32px;
-  margin: 0;
   line-height: 30px;
   color: @menu;
 }
 
 .upload__img {
   display: block;
-  margin: 20px 18px;
+  margin: 20px auto;
 }
 
 .upload__menu {
-
   display: flex;
   flex-wrap: wrap;
-  padding: 0 38px;
 }
 
 .upload__icon {
@@ -65,7 +62,8 @@
 .upload__button-section {
   background-color: @secondary-bg;
   border-top: 1px solid @border;
-  padding: 38px 18px 41px;
+  padding-top: 38px;
+  padding-bottom: 41px;
 }
 
 .upload__button {
@@ -82,7 +80,6 @@
   &--submit {
     border-color: @accent;
     color: @accent;
-    background-color: @main-bg;
     margin-bottom: 12px;
 
     &:hover,
@@ -115,3 +112,11 @@
     }
   }
 }
+
+/*@media (min-width: @tablet-width) {
+
+}
+
+@media (min-width: @desktop-width) {
+
+}*/

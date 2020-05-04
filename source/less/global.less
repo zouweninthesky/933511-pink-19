@@ -1,5 +1,5 @@
 body {
-  margin: 0 auto;
+  margin: 0;
   background-color: @main-bg;
   color: @main-font;
   font-weight: normal;
@@ -8,7 +8,7 @@ body {
   text-align: center;
   font-kerning: none;
   font-family: "Open Sans", "Arial", sans-serif;
-  width: 320px;
+  min-width: 320px;
 }
 
 a {
@@ -16,7 +16,10 @@ a {
   color: @main-font;
 }
 
-.visually-hidden {
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
@@ -24,4 +27,25 @@ a {
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+
+.container {
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 660px) {
+  .container {
+    width: 620px;
+  }
+}
+
+@media (min-width: 960px) {
+  .container {
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

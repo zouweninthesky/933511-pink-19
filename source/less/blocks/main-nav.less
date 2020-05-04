@@ -4,7 +4,7 @@
 }
 
 .main-nav__wrapper {
-  padding: 53px 0 16px;
+  padding: 53px 0 0;
   box-shadow: 0 1px 0 0 @main-font;
 }
 
@@ -86,5 +86,127 @@
 
   &:not(.main-nav__link--current):active {
     color: fade(@accent, 30%);
+  }
+}
+
+.main-nav__download {
+  margin-top: 1px;
+  background: url("../img/bg-back-mobile@1x.jpg") repeat-x;
+  background-position: 0 -70px;
+  background-color: @download;
+}
+
+.main-nav__slogan {
+  box-sizing: border-box;
+  width: 320px;
+  padding: 28px 45px 33px;
+  padding-top: 28px;
+  padding-bottom: 33px;
+  color: @main-bg;
+  font-size: 24px;
+  font-weight: lighter;
+  margin: 0 auto;
+}
+
+.main-nav__img {
+  display: block;
+}
+
+
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    padding: 109px 0 0;
+  }
+
+  .main-nav__link {
+  }
+
+  .main-nav__download {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: -275px -110px;
+    position: relative;
+  }
+
+  .main-nav__slogan {
+    font-size: 40px;
+    line-height: normal;
+    width: 660px;
+    padding: 83px 396px 0 78px;
+  }
+
+  .main-nav__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 100%;
+    position: absolute;
+    background-color: fade(@main-font, 30%);
+  }
+
+  .main-nav--index {
+    left: 0;
+    margin-left: 0;
+    min-height: 853px;
+    position: static;
+    background: url("../img/bg-back-desktop@1x.jpg");
+    background-position: -680px 0;
+  }
+
+  .main-nav__index-wrapper {
+    background-color: fade(@main-font, 30%);
+  }
+
+  .main-nav__wrapper {
+    width: 700px;
+    padding: 0 130px;
+    box-shadow: none;
+    margin: 0 auto;
+    min-height: 110px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-nav__logo {
+    position: static;
+    margin-right: 173px;
+    margin-top: 38px;
+  }
+
+  .main-nav__list {
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__item {
+    padding: 43px 0 43px;
+    box-shadow: none;
+  }
+
+  .main-nav__link {
+    line-height: 18px;
+    font-weight: normal;
+    text-transform: capitalize;
+
+    &:not(.main-nav__link--current):active {
+      color: fade(@main-bg, 30%);
+    }
+  }
+
+  .main-nav__download {
+    background: transparent;
+  }
+
+  .main-nav__slogan {
+    width: 960px;
+    font-size: 50px;
+    line-height: normal;
+    padding-left: 60px;
+    padding-right: 600px;
   }
 }

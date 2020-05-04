@@ -2,13 +2,45 @@
 
 }
 
+.page-header__wrapper {
+  background: url("../img/bg-back-mobile@1x.jpg");
+  background-position: 0 -68px;
+}
+
 .page-header__title {
+  box-sizing: border-box;
+  width: 320px;
   font-weight: lighter;
   font-size: 24px;
   padding: 35px 46px 45px;
-  margin: 0;
+  margin: 0 auto;
   min-height: 90px;
   color: @main-bg;
-  background: url("../img/bg-back-mobile@1x.jpg");
-  background-position: 0 -68px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    background: url("../img/bg-back-tablet@1x.jpg");
+    background-position: -280px -110px;
+  }
+
+  .page-header__title {
+    width: 660px;
+    font-size: 50px;
+    line-height: normal;
+    min-height: 210px;
+    padding: 60px 46px 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    background: url("../img/bg-back-desktop@1x.jpg");
+    background-position: -680px 0;
+  }
+
+  .page-header__title {
+    width: 960px;
+    padding: 184px 225px 98px;
+  }
 }
