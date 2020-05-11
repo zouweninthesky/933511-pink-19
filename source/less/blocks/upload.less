@@ -17,12 +17,14 @@
 .upload__menu {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .upload__icon {
   flex-basis: 80px;
   background-color: transparent;
   border: none;
+  margin-bottom: 40px;
 
   & svg {
     fill: fade(@menu, 30%);
@@ -39,11 +41,27 @@
 }
 
 .upload__range {
-  width: 100%;
+  width: 240px;
   height: 2px;
   background-color: @menu;
   position: relative;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
+
+  &--cut {
+    order: 10;
+
+    & .upload__toggle {
+      left: 80%;
+    }
+  }
+
+  &--fill .upload__toggle {
+    left: 20%;
+  }
+
+  &--brightness .upload__toggle {
+    left: 50%;
+  }
 }
 
 .upload__toggle {
@@ -56,7 +74,10 @@
   border-radius: 10px;
   cursor: pointer;
   margin-top: -6px;
-  left: 80%;
+
+  &:active {
+    background-color: @accent;
+  }
 }
 
 .upload__button-section {
@@ -113,10 +134,131 @@
   }
 }
 
-/*@media (min-width: @tablet-width) {
-
+@media (max-width: 659px) {
+  .upload__range--fill,
+  .upload__range--brightness {
+    display: none;
+  }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @tablet-width) {
+  .upload__intro {
+    font-size: 18px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 
-}*/
+  .upload__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 54px 0;
+  }
+
+  .upload__img {
+    margin-left: 20px;
+  }
+
+  .upload__menu {
+    width: 275px;
+  }
+
+  .upload__icon {
+    display: none;
+
+    & svg {
+      fill: @accent;
+    }
+
+    &:not(.upload__icon--active):hover svg {
+      fill: @accent;
+    }
+
+    &--active svg {
+      fill: @accent;
+    }
+  }
+
+  .upload__range {
+    width: 202px;
+    position: relative;
+    margin-bottom: 70px;
+
+    &--cut {
+      order: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 0;
+      height: 1px;
+      width: 275px;
+      background-color: @border;
+    }
+  }
+
+  .upload__button-section {
+    display: flex;
+    border: none;
+    flex-direction: column;
+  }
+
+  .upload__button {
+    width: 260px;
+
+    &--submit {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .upload {
+    background-color: @main-bg;
+  }
+
+  .upload__wrapper {
+    background-color: @secondary-bg;
+    padding: 57px 60px 57px 80px;
+    width: 820px;
+  }
+
+  .upload__img {
+    margin: 0;
+  }
+
+  .upload__menu-wrapper {
+    margin-left: 90px;
+  }
+
+  .upload__menu {
+    width: 410px;
+  }
+
+  .upload__range {
+    width: 288px;
+    margin-top: 19px;
+    margin-bottom: 70px;
+    margin-left: auto;
+
+    &::after {
+      left: -100px;
+      width: 410px;
+    }
+  }
+
+  .upload__button-section {
+    flex-direction: row;
+  }
+
+  .upload__button {
+    width: 183px;
+
+    &--submit {
+      margin-bottom: 0;
+      margin-right: 44px;
+    }
+  }
+}

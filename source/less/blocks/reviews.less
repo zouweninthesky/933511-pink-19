@@ -26,12 +26,49 @@
   color: @menu;
 }
 
-@media (min-width: @tablet-width) {
-  .reviews__text {
-    font-size: 18px;
+@media (max-width: 659px) {
+  .reviews__info {
+    display: none;
   }
 }
 
-/*@media (min-width: @desktop-width) {
+@media (min-width: @tablet-width) {
+  .reviews__list {
+    padding: 0;
+  }
 
-}*/
+  .reviews__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews__name {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+    order: -1;
+  }
+
+  .reviews__info {
+    color: @menu;
+    line-height: 30px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews__text {
+    padding: 0 140px;
+  }
+
+  .reviews__name {
+    font-size: 24px;
+  }
+
+  .reviews__info {
+    font-size: 18px;
+  }
+}
