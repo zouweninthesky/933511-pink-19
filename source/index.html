@@ -23,10 +23,9 @@
         </div>
         <div class="main-nav__download">
           <p class="main-nav__slogan">Взгляните на жизнь иначе!</p>
-          <img src="img/iphone-hand-mobile@1x.png" alt="" class="main-nav__img">
           <section class="download container">
             <h2 class="visually-hidden">Скачайте приложение на Ваше устройство</h2>
-            <button class="download__button button">Скачать приложение</button>
+            <a class="download__button" href="https://www.apple.com/ios/app-store/">Скачать приложение</a>
             <ul class="download__list">
               <li><a class="download__item download__item--app-store" href="https://www.apple.com/ios/app-store/"></a></li>
               <li><a class="download__item download__item--play-market" href="https://play.google.com/store?hl=ru"></a></li>
@@ -84,6 +83,7 @@
           <li class="reviews__item">
             <h3 class="reviews__name">Николай Петров</h3>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            <p class="reviews__info">25 лет, водитель трамвая</p>
           </li>
         </ul>
         <div class="slider__dot-section">
@@ -94,46 +94,95 @@
       </section>
       <section class="purchase slider">
         <table class="purchase__table">
-          <tr class="purchase__row">
-            <th colspan="2" class="purchase__title">
-              <span class="purchase__name">???</span>
-              <span class="purchase__price">???</span>
+          <tr>
+            <th class="purchase__title"></th>
+            <th class="purchase__title">
+              <span class="purchase__name">База</span>
+              <span class="purchase__price">1,99 USD</span>
             </th>
-            <th colspan="2" class="purchase__title purchase__title--best">
+            <th class="purchase__title purchase__title--best">
               <span class="purchase__name">Стандарт</span>
               <span class="purchase__price">3,99 USD</span>
             </th>
-            <th colspan="2" class="purchase__title">
-              <span class="purchase__name">???</span>
-              <span class="purchase__price">???</span>
+            <th class="purchase__title">
+              <span class="purchase__name">Анлим</span>
+              <span class="purchase__price">9,99 USD</span>
             </th>
           </tr>
-          <tr class="purchase__row">
-            <td class="purchase__content">Розовый фильтр</td>
-            <td class="purchase__included">Входит</td>
-            <td class="purchase__content">Розовый фильтр</td>
-            <td class="purchase__included">Входит</td>
-            <td class="purchase__content">Розовый фильтр</td>
-            <td class="purchase__included">Входит</td>
+          <tr>
+            <td class="purchase__cell">Розовый фильтр</td>
+            <td class="purchase__cell">
+              <div class="purchase__feature" data-feature-name="Розовый фильтр">
+                <span class="purchase__feature-included">
+                  <span class="visually-hidden">Входит</span>
+                </span>
+              </div>
+            </td>
+            <td class="purchase__cell">
+              <div class="purchase__feature" data-feature-name="Розовый фильтр">
+                <span class="purchase__feature-included">
+                  <span class="visually-hidden">Входит</span>
+                </span>
+              </div>
+            </td>
+            <td class="purchase__cell">
+              <div class="purchase__feature" data-feature-name="Розовый фильтр">
+                <span class="purchase__feature-included">
+                  <span class="visually-hidden">Входит</span>
+                </span>
+              </div>
+            </td>
           </tr>
-          <tr class="purchase__row">
-            <td class="purchase__content">Смайлики</td>
-            <td class="purchase__included purchase__included--not-included">Не входит</td>
-            <td class="purchase__content">Смайлики</td>
-            <td class="purchase__included">Входит</td>
-            <td class="purchase__content">Смайлики</td>
-            <td class="purchase__included">Входит</td>
+          <tr>
+            <td class="purchase__cell">Смайлики</td>
+            <td class="purchase__cell">
+              <div class="purchase__feature" data-feature-name="Смайлики">
+                <span class="purchase__feature-included purchase__feature-included--not">
+                  <span class="visually-hidden">Не входит</span>
+                </span>
+              </div>
+            </td>
+            <td class="purchase__cell">
+              <div class="purchase__feature" data-feature-name="Смайлики">
+                <span class="purchase__feature-included">
+                  <span class="visually-hidden">Входит</span>
+                </span>
+              </div>
+            </td>
+            <td class="purchase__cell">
+              <div class="purchase__feature" data-feature-name="Смайлики">
+                <span class="purchase__feature-included">
+                  <span class="visually-hidden">Входит</span>
+                </span>
+              </div>
+            </td>
           </tr>
-          <tr class="purchase__row">
-            <td class="purchase__content">Комментарии</td>
-            <td class="purchase__included purchase__included--not-included">Не входит</td>
-            <td class="purchase__content">Комментарии</td>
-            <td class="purchase__included purchase__included--not-included">Не входит</td>
-            <td class="purchase__content">Комментарии</td>
-            <td class="purchase__included">Входит</td>
+          <tr>
+            <td class="purchase__cell">Комментарии</td>
+            <td class="purchase__cell">
+              <div class="purchase__feature" data-feature-name="Комментарии">
+                <span class="purchase__feature-included purchase__feature-included--not">
+                  <span class="visually-hidden">Не входит</span>
+                </span>
+              </div>
+            </td>
+            <td class="purchase__cell">
+              <div class="purchase__feature" data-feature-name="Комментарии">
+                <span class="purchase__feature-included purchase__feature-included--not">
+                  <span class="visually-hidden">Не входит</span>
+                </span>
+              </div>
+            </td>
+            <td class="purchase__cell">
+              <div class="purchase__feature" data-feature-name="Комментарии">
+                <span class="purchase__feature-included">
+                  <span class="visually-hidden">Входит</span>
+                </span>
+              </div>
+            </td>
           </tr>
         </table>
-        <div class="slider__dot-section">
+        <div class="slider__dot-section slider__dot-section--hidden">
           <button type="button" class="slider__dot"></button>
           <button type="button" class="slider__dot slider__dot--current"></button>
           <button type="button" class="slider__dot"></button>

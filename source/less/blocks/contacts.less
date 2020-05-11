@@ -63,12 +63,14 @@
   .contacts__intro {
     font-size: 40px;
     line-height: normal;
+    padding: 0 120px;
   }
 
   .contacts__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0 50px;
   }
 
   .contacts__item {
@@ -76,12 +78,20 @@
       margin: 0 auto;
     }
   }
+
+  .contacts__address {
+    padding: 0 120px 40px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .contacts__intro {
     font-size: 50px;
     padding: 0 230px;
+  }
+
+  .contacts__list {
+    flex-wrap: nowrap;
   }
 
   .contacts__item {
@@ -94,9 +104,14 @@
     &--address {
       margin: 0;
     }
+  }
 
-    .contacts__label {
-      margin-bottom: 25px;
-    }
+  .contacts__label {
+    margin-bottom: 25px;
+  }
+
+  .contacts__address {
+    padding: 0 10px 40px;
   }
 }
+

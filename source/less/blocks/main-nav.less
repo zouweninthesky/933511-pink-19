@@ -91,8 +91,8 @@
 
 .main-nav__download {
   margin-top: 1px;
-  background: url("../img/bg-back-mobile@1x.jpg") repeat-x;
-  background-position: 0 -70px;
+  background: url("../img/iphone-hand-mobile@1x.png") no-repeat, url("../img/bg-back-mobile@1x.jpg") repeat-x;
+  background-position: 0 105px, 0 -70px;
   background-color: @download;
 }
 
@@ -106,24 +106,17 @@
   font-size: 24px;
   font-weight: lighter;
   margin: 0 auto;
+  margin-bottom: 280px;
 }
-
-.main-nav__img {
-  display: block;
-}
-
 
 @media (min-width: @tablet-width) {
   .main-nav__wrapper {
     padding: 109px 0 0;
   }
 
-  .main-nav__link {
-  }
-
   .main-nav__download {
-    background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: -275px -110px;
+    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+    background-position: -20px 80px, -275px -110px;
     position: relative;
   }
 
@@ -132,12 +125,7 @@
     line-height: normal;
     width: 660px;
     padding: 83px 396px 0 78px;
-  }
-
-  .main-nav__img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -153,8 +141,8 @@
     margin-left: 0;
     min-height: 853px;
     position: static;
-    background: url("../img/bg-back-desktop@1x.jpg");
-    background-position: -680px 0;
+    background: url("../img/iphone-hand-desktop@1x.png") no-repeat, url("../img/bg-back-desktop@1x.jpg");
+    background-position: 150px 226px, -680px 0;
   }
 
   .main-nav__index-wrapper {
@@ -196,6 +184,20 @@
     &:not(.main-nav__link--current):active {
       color: fade(@main-bg, 30%);
     }
+
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -12px;
+        left: 0;
+        height: 2px;
+        background-color: @main-bg;
+      }
+    }
   }
 
   .main-nav__download {
@@ -206,7 +208,7 @@
     width: 960px;
     font-size: 50px;
     line-height: normal;
-    padding-left: 60px;
-    padding-right: 600px;
+    padding-left: 0;
+    padding-right: 660px;
   }
 }
