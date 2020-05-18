@@ -21,13 +21,14 @@
         </div>
       </nav>
       <div class="page-header__wrapper">
-        <h1 class="page-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <h1 class="page-header__title page-header__title--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
     </header>
     <main class="page-main">
+        <p class="contest-form__intro container">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+          <span class="contest-form__intro contest-form__intro--please">Пожалуйста, заполните форму ниже:</span>
+        </p>
       <form action="https://echo.htmlacademy.ru" class="contest-form" method="post">
-        <p class="contest-form__intro container">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-        <p class="contest-form__intro contest-form__intro--please container">Пожалуйста, заполните форму ниже:</p>
         <fieldset class="contest-form__personal container">
           <div class="contest-form__personal-wrapper">
             <label class="contest-form__label" for="surname">Фамилия:</label><input type="text" placeholder="Укажите фамилию *" class="contest-form__text-input" name="surname" required id="surname">
@@ -73,15 +74,15 @@
         </div>
         <div class="contest-form__wrapper contest-form__wrapper--app-used">
           <fieldset class="contest-form__app-used container">
-            <legend class="contest-form__legend">С каким приложением путешествовали?</legend>
-            <input type="radio" name="app-used" value="ios" class="contest-form__radio visually-hidden" checked id="ios"><label class="contest-form__checkbox-label" for="ios">Pink для iOS</label>
-            <input type="radio" name="app-used" value="android" class="contest-form__radio visually-hidden" id="android"><label class="contest-form__checkbox-label" for="android">Pink на Android</label>
-            <input type="radio" name="app-used" value="windows-phone" class="contest-form__radio visually-hidden" id="windows-phone"><label class="contest-form__checkbox-label" for="windows-phone">Windows Phone</label>
+            <legend class="contest-form__legend contest-form__legend--radio">С каким приложением путешествовали?</legend>
+            <input type="radio" name="app-used" value="ios" class="contest-form__radio visually-hidden" checked id="ios"><label class="contest-form__checkbox-label contest-form__checkbox-label--radio" for="ios">Pink для iOS</label>
+            <input type="radio" name="app-used" value="android" class="contest-form__radio visually-hidden" id="android"><label class="contest-form__checkbox-label contest-form__checkbox-label--radio" for="android">Pink на Android</label>
+            <input type="radio" name="app-used" value="windows-phone" class="contest-form__radio visually-hidden" id="windows-phone"><label class="contest-form__checkbox-label contest-form__checkbox-label--radio" for="windows-phone">Windows Phone</label>
           </fieldset>
         </div>
         <div class="contest-form__wrapper contest-form__wrapper--describe">
         <fieldset class="contest-form__describe container">
-          <legend class="contest-form__legend" for="describe">Опишите свои эмоции</legend><textarea name="describe" class="contest-form__textarea-input" id="describe" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <legend class="contest-form__legend contest-form__legend--describe" for="describe">Опишите свои эмоции</legend><textarea name="describe" class="contest-form__textarea-input" id="describe" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
         </div>
         <div class="contest-form__submit-wrapper container">

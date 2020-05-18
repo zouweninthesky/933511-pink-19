@@ -1,11 +1,15 @@
+.slider__dot-section {
+  margin-top: 21px;
+}
+
 .slider__dot {
-  margin: 0 9px;
+  margin: 0 7px;
   width: 1px;
   height: 1px;
   line-height: 0;
   padding: 0;
-  border: 2px solid fade(@menu, 30%);
-  border-radius: 2px;
+  border: 3px solid fade(@menu, 30%);
+  border-radius: 3px;
 
   &:not(.slider__dot--current):hover {
     border-color: fade(@menu, 60%);
@@ -17,25 +21,21 @@
 
   &--current {
     border-color: @main-bg;
-    box-shadow: 0 0 0 2px @menu;
+    box-shadow: 0 0 0 3px @menu;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .slider__dot {
-    border-width: 3px;
-    border-radius: 3px;
-
-    &--current {
-      box-shadow: 0 0 0 3px @menu;
-    }
-  }
-
   .slider__dot-section {
+    margin-top: 9px;
 
     &--hidden {
       display: none;
     }
+  }
+
+  .slider__dot {
+    margin: 0 8px;
   }
 }
 
