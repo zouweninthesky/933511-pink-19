@@ -23,14 +23,15 @@
 }
 
 .research__img-text {
+  box-sizing: border-box;
   display: flex;
   position: absolute;
   justify-content: center;
-  align-items: center;
-  bottom: 18px;
-  left: 18px;
-  width: 176px;
-  height: 176px;
+  bottom: 19px;
+  left: 17px;
+  width: 202px;
+  height: 202px;
+  padding-top: 7px;
   line-height: 150px;
   font-size: 96px;
   font-weight: bold;
@@ -42,8 +43,8 @@
 .research__text-wrapper {
   width: 295px;
   margin-left: auto;
-  margin-right: 24px;
-  margin-top: 66px;
+  margin-right: 19px;
+  margin-top: 70px;
 }
 
 .research__title {
@@ -51,10 +52,13 @@
   line-height: 36px;
   color: @main-font;
   padding-right: 127px;
+  margin-bottom: 10px;
 }
 
 .research__info {
+  margin-top: 0;
   color: @menu;
+  margin-bottom: 11px;
 }
 
 .research__link {
@@ -74,33 +78,42 @@
   }
 
   .research__img {
+    margin-top: 25px;
     flex-basis: 298px;
     height: 345px;
     margin-bottom: 67px;
   }
 
   .research__img-text {
-    width: 221px;
-    height: 221px;
+    width: 253px;
+    height: 253px;
     font-size: 120px;
     line-height: 187px;
     border-width: 16px;
-    left: 22px;
-    bottom: 22px;
+    left: 23px;
+    bottom: 23px;
+    padding-top: 8px;
   }
 
   .research__text-wrapper {
     width: 525px;
-    margin-top: 114px;
+    margin-top: 93px;
     line-height: 30px;
+    margin-right: 48px;
   }
 
   .research__title {
     line-height: 30px;
+    margin-bottom: 24px;
+  }
+
+  .research__br {
+    display: none;
   }
 
   .research__info {
     font-size: 18px;
+    margin-bottom: 31px;
   }
 
   .research__link {

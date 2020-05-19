@@ -5,7 +5,7 @@
 .contest-form__intro {
   line-height: 30px;
   padding-top: 45px;
-  padding-bottom: 20px;
+  padding-bottom: 17px;
   color: @menu;
 }
 
@@ -13,7 +13,7 @@
   border: none;
   display: flex;
   text-align: left;
-  padding-bottom: 40px;
+  padding-bottom: 36px;
 }
 
 .contest-form__personal-wrapper {
@@ -24,17 +24,26 @@
 .contest-form__label {
   color: @accent;
   text-transform: uppercase;
-  padding-left: 25px;
-  margin-bottom: 10px;
+  padding-left: 22px;
+  margin-bottom: 3px;
   margin-top: 15px;
 }
 
 .contest-form__legend {
-  padding: 32px 20px 10px;
+  padding: 39px 20px 18px;
   line-height: 18px;
   color: @accent;
   text-align: center;
   text-transform: uppercase;
+
+  &--radio {
+    padding-bottom: 14px;
+  }
+
+  &--describe {
+    padding-top: 38px;
+    padding-bottom: 11px;
+  }
 }
 
 .contest-form__text-input {
@@ -43,10 +52,10 @@
   color: @menu;
   font-size: 18px;
   line-height: 30px;
-  padding: 13px 0;
+  padding: 14px 0;
   padding-left: 20px;
   border: 2px solid @border;
-  margin: 5px 0 20px;
+  margin: 5px 0 6px;
 
   &:hover {
     border-color: @menu;
@@ -62,6 +71,7 @@
   display: flex;
   direction: column;
   flex-wrap: wrap;
+  padding-bottom: 16px;
 }
 
 .contest-form__achievement-wrapper {
@@ -83,8 +93,8 @@
   & + .contest-form__checkbox-label::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: 3px;
     width: 35px;
     height: 35px;
     background-color: @main-bg;
@@ -101,9 +111,15 @@
 .contest-form__contacts {
   border: none;
   text-align: left;
-  padding-top: 41px;
-  padding-bottom: 44px;
+  padding-top: 19px;
+  padding-bottom: 36px;
   display: flex;
+}
+
+.contest-form__phone-wrapper,
+.contest-form__email-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .contest-form__app-used {
@@ -111,6 +127,7 @@
   direction: column;
   flex-wrap: wrap;
   border: none;
+  padding-bottom: 2px;
 }
 
 .contest-form__radio {
@@ -118,7 +135,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 3px;
     width: 15px;
     height: 15px;
     background-color: @main-bg;
@@ -138,9 +155,9 @@
   line-height: 30px;
   color: @menu;
   position: relative;
-  padding-left: 73px;
+  padding-left: 69px;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
 
   &:hover::before {
     box-shadow: 0 0 0 2px @menu;
@@ -148,6 +165,11 @@
 
   &:active::before {
     box-shadow: 0 0 0 2px @accent;
+  }
+
+  &--radio {
+    color: blue;
+    margin-bottom: 45px;
   }
 }
 
@@ -162,7 +184,7 @@
   color: @menu;
   font-size: 18px;
   line-height: 30px;
-  padding: 12px 20px;
+  padding: 14px 20px 10px;
   min-height: 173px;
 
   &::placeholder {
@@ -186,13 +208,14 @@
   color: @main-bg;
   text-transform: uppercase;
   font-weight: bold;
-  width: 276px;
-  height: 59px;
+  width: 278px;
+  height: 63px;
+  padding-top: 3px;
   border: solid 2px transparent;
   border-radius: 2px;
   background-color: @form-button;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  margin-top: 33px;
+  margin-bottom: 21px;
 
   &:hover,
   &:focus {
@@ -236,18 +259,14 @@
   .contest-form__intro {
     font-size: 18px;
     line-height: 30px;
-    padding: 90px 85px 0;
+    padding: 92px 85px 36px;
     width: 490px;
-
-    &--please {
-      padding-top: 0;
-      padding-bottom: 50px;
-    }
   }
 
   .contest-form__personal {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 22px;
   }
 
   .contest-form__personal-wrapper {
@@ -257,15 +276,25 @@
 
   .contest-form__label {
     padding-left: 0;
+    margin-bottom: 40px;
 
     &--phone,
     &--email {
-      padding-left: 20px;
+      padding-left: 17px;
+      margin-bottom: 1px;
     }
   }
 
   .contest-form__legend {
-    padding: 0 38px;
+    padding: 0 32px;
+    position: absolute;
+    left: 50%;
+    top: -1px;
+    transform: translate(-50%, -50%);
+    width: auto;
+    white-space: nowrap;
+
+    background-color: @main-bg;
   }
 
   .contest-form__text-input {
@@ -275,6 +304,7 @@
     width: auto;
     flex-grow: 1;
     background-color: transparent;
+    padding-left: 17px;
 
     &--phone,
     &--email {
@@ -286,6 +316,9 @@
     border: 2px solid @border;
     background-color: @main-bg;
     width: auto;
+    margin-top: 3px;
+    padding-top: 36px;
+    padding-bottom: 21px;
   }
 
   .contest-form__wrapper {
@@ -324,7 +357,8 @@
     border: 2px solid @border;
     background-color: @main-bg;
     width: auto;
-    padding: 0 60px;
+    margin-top: 3px;
+    padding: 15px 60px 7px;
   }
 
   .contest-form__contacts-wrapper {
@@ -370,27 +404,33 @@
     border: 2px solid @border;
     background-color: @main-bg;
     width: auto;
+    padding-top: 36px;
+    padding-bottom: 14px;
   }
 
   .contest-form__radio {
     & + .contest-form__checkbox-label::before {
       left: 40px;
+      top: -1px;
     }
   }
 
   .contest-form__checkbox-label {
-    padding-left: 103px;
+    padding-left: 97px;
   }
 
   .contest-form__describe {
     display: flex;
     width: auto;
     border: 2px solid @border;
+    margin-top: 3px;
   }
 
   .contest-form__textarea-input {
-    width: 496px;
-    margin: 40px auto 45px;
+    width: 457px;
+    margin: 40px auto 41px;
+    min-height: 163px;
+    padding-left: 19px;
   }
 
   .contest-form__submit-wrapper {
@@ -399,6 +439,11 @@
     justify-content: space-between;
     align-items: baseline;
     margin-top: 38px;
+    padding-bottom: 27px;
+  }
+
+  .contest-form__submit {
+    width: 300px;
   }
 
   .contest-form__hint {
@@ -418,14 +463,37 @@
     flex-direction: row;
   }
 
+  .contest-form__intro {
+    width: 752px;
+    padding-top: 93px;
+    padding-bottom: 49px;
+
+    &--please {
+      padding: 0;
+    }
+  }
+
   .contest-form__personal {
-    width: 411px;
+    width: 435px;
+    margin-right: 0;
+    padding-left: 4px;
+  }
+
+  .contest-form__label {
+    &--phone,
+    &--email {
+      padding-left: 17px;
+      margin-bottom: 0;
+      margin-top: 14px;
+    }
   }
 
   .contest-form__text-input {
+    margin-top: 31px;
+
     &--phone,
     &--email {
-      width: 371px;
+      width: 354px;
     }
   }
 
@@ -433,8 +501,14 @@
     width: 940px;
     padding: 0 10px;
 
+    &--contacts {
+      margin-top: 17px;
+    }
+
     &--app-used {
-      width: 431px;
+      width: 434px;
+      margin-top: 30px;
+      margin-left: 52px;
     }
   }
 
@@ -442,34 +516,78 @@
     &--whole {
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 50px 7px;
+    }
+  }
+
+  .contest-form__checkbox-label {
+    padding-left: 62px;
+
+    &--radio {
+      margin-bottom: 44px;
     }
   }
 
   .contest-form__contacts-wrapper {
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 16px;
+  }
+
+  .contest-form__contacts {
+    padding: 11px 58px 0;
   }
 
   .contest-form__phone-wrapper {
     &::after {
-      left: 334px;
-      top: 30px;
+      left: 313px;
+      top: 32px;
     }
   }
 
   .contest-form__email-wrapper {
     &::after {
-      left: 755px;
-      top: 30px;
+      left: 759px;
+      top: 32px;
+    }
+  }
+
+  .contest-form__checkbox {
+    & + .contest-form__checkbox-label::before {
+      left: 0;
+    }
+  }
+
+  .contest-form__app-used {
+    padding-top: 38px;
+    padding-bottom: 16px;
+  }
+
+  .contest-form__radio {
+    & + .contest-form__checkbox-label::before {
+      left: 66px;
     }
   }
 
   .contest-form__textarea-input {
     width: 776px;
     min-height: 100px;
+    margin-top: 37px;
+    margin-bottom: 34px;
+  }
+
+  .contest-form__submit-wrapper {
+    margin-top: 32px;
+    padding-bottom: 0;
   }
 
   .contest-form__submit {
-    width: 280px;
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  .contest-form__hint {
+    margin-bottom: 0;
   }
 }

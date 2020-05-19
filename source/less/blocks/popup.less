@@ -2,24 +2,31 @@
   width: 320px;
   background-color: @main-bg;
   box-shadow: 0 7px 15px 0 fade(#000101, 15%);
-  padding: 46px 0 0;
+  padding: 26px 0 0;
   margin: auto;
+
 }
 
 .popup__title {
   font-size: 18px;
+  padding-bottom: 11px;
 }
 
 .popup__description {
   color: @menu;
-  padding: 0 24px;
+  padding: 0 24px 18px;
+
+  &--error {
+    padding: 0 24px;
+  }
 }
 
 .popup__button-wrapper {
-  padding: 48px 20px 52px;
+  padding: 48px 20px 2px;
   background-color: @secondary-bg;
 
   &--error {
+    padding: 24px 20px 2px;
     background-color: @main-bg;
   }
 }
@@ -29,12 +36,16 @@
   color: @main-bg;
   text-transform: uppercase;
   font-weight: bold;
-  width: 276px;
-  height: 59px;
+  width: 278px;
+  height: 63px;
   border: solid 2px transparent;
   border-radius: 2px;
   background-color: @form-button;
   margin-bottom: 50px;
+
+  &--success {
+    margin-bottom: 52px;
+  }
 
   &:hover,
   &:focus {
@@ -55,13 +66,18 @@
 @media (min-width: @tablet-width) {
   .popup {
     width: 460px;
-    padding-top: 20px;
+    padding-top: 11px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .popup__title {
     line-height: 40px;
     font-size: 30px;
     padding: 0 100px;
+    margin-bottom: 20px;
   }
 
   .popup__description {
@@ -74,7 +90,12 @@
   }
 
   .popup__button-wrapper {
+    padding-top: 46px;
     padding-bottom: 0;
+
+    &--error {
+      padding-top: 2px;
+    }
   }
 
   .popup__button {
@@ -89,11 +110,14 @@
 
   .popup__description {
     font-size: 18px;
-    padding: 0 210px 20px;
+    padding: 0 210px 24px;
   }
 
   .popup__button-wrapper {
+    padding-top: 47px;
+
     &--error {
+      padding-top: 47px;
       background-color: @secondary-bg;
     }
   }

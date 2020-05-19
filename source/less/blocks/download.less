@@ -2,15 +2,9 @@
   padding-top: 28px;
 }
 
-.download__info {
-  padding: 0 0 35px;
-  color: @main-bg;
-  font-weight: lighter;
-}
-
 .download__button {
   display: inline-block;
-  width: 281px;
+  width: 275px;
   border: solid 3px @main-bg;
   border-radius: 40px;
   padding: 15px 0 16px;
@@ -34,17 +28,18 @@
 
 .download__list {
   padding: 0;
-  padding-top: 116px;
+  padding-top: 82px;
   list-style: none;
   position: relative;
+  margin-bottom: 0;
 }
 
 .download__item {
   &--app-store::before {
     position: absolute;
     content: "";
-    bottom: 20px;
-    left: 27px;
+    bottom: 7px;
+    left: 39px;
     width: 46px;
     height: 57px;
     background-image: url("../img/logo-apple.svg");
@@ -53,7 +48,7 @@
   &--play-market::before {
     position: absolute;
     content: "";
-    bottom: 22px;
+    bottom: 9px;
     left: 120px;
     width: 42px;
     height: 47px;
@@ -63,7 +58,7 @@
   &--microsoft-store::before {
     position: absolute;
     content: "";
-    bottom: 24px;
+    bottom: 10px;
     left: 200px;
     width: 44px;
     height: 42px;
@@ -71,9 +66,17 @@
   }
 }
 
+.download__info {
+  padding-bottom: 30px;
+  color: @main-bg;
+  font-weight: lighter;
+}
+
 @media (min-width: @tablet-width) {
   .download {
-    padding-bottom: 75px;
+    padding-left: 0;
+    padding-top: 31px;
+    padding-bottom: 92px;
   }
 
   .download__info {
@@ -84,29 +87,69 @@
   }
 
   .download__button {
-    width: 300px;
+    width: 294px;
     margin-right: 320px;
+  }
+
+  .download__list {
+    padding-top: 106px;
+  }
+
+  .download__item {
+    &--app-store::before {
+      bottom: 17px;
+      left: 47px;
+    }
+
+    &--play-market::before {
+      bottom: 21px;
+      left: 130px;
+    }
+
+    &--microsoft-store::before {
+      bottom: 20px;
+      left: 207px;
+    }
   }
 }
 
 
 @media (min-width: @desktop-width) {
   .download {
-    padding-top: 50px;
-    padding-bottom: 110px;
+    padding-top: 52px;
+    padding-bottom: 99px;
   }
 
   .download__list {
     margin-top: 35px;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
   }
 
   .download__button {
+    padding-top: 15px;
+    padding-bottom: 17px;
     font-size: 21px;
     margin-right: 620px;
+    margin-left: -10px;
+  }
+
+  .download__item {
+    &--app-store::before {
+      bottom: 18px;
+      left: 53px;
+    }
+
+    &--play-market::before {
+      left: 134px;
+    }
+
+    &--microsoft-store::before {
+      bottom: 21px;
+      left: 212px;
+    }
   }
 
   .download__info {
-    margin-right: 620px;
+    margin-right: 632px;
   }
 }
