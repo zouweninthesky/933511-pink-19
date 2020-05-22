@@ -11,7 +11,7 @@
 .main-nav__logo {
   display: block;
   position: absolute;
-  top: 22px;
+  top: 24px;
   left: 20px;
 
   &:hover .main-nav__logo-image {
@@ -21,6 +21,14 @@
   &:active .main-nav__logo-image {
     opacity: 0.3;
     fill: @main-bg;
+  }
+}
+
+.main-nav__logo-image {
+  fill: @main-bg;
+  &--tablet,
+  &--desktop {
+    display: none;
   }
 }
 
@@ -103,7 +111,7 @@
 .main-nav__slogan {
   box-sizing: border-box;
   width: 320px;
-  padding: 20px 45px 33px;
+  padding: 22px 45px 33px;
   color: @main-bg;
   font-size: 24px;
   line-height: 29px;
@@ -115,6 +123,21 @@
 @media (min-width: @tablet-width) {
   .main-nav__wrapper {
     padding: 109px 0 0;
+  }
+
+  .main-nav__logo {
+    top: 27px;
+  }
+
+  .main-nav__logo-image {
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: inline-block;
+    }
   }
 
   .main-nav__download {
@@ -162,8 +185,8 @@
   }
 
   .main-nav__wrapper {
-    width: 700px;
-    padding: 0 130px;
+    width: 940px;
+    padding: 0 10px;
     box-shadow: none;
     margin: 0 auto;
     min-height: 110px;
@@ -174,7 +197,18 @@
   .main-nav__logo {
     position: static;
     margin-right: 173px;
-    margin-top: 38px;
+    margin-top: 27px;
+  }
+
+  .main-nav__logo-image {
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: inline-block;
+    }
   }
 
   .main-nav__list {
