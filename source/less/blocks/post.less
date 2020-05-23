@@ -2,13 +2,20 @@
   text-align: left;
   color: @menu;
   background-color: @secondary-bg;
+}
+
+.post__description {
+  padding-left: 17px;
   padding-bottom: 20px;
 }
 
 .post__user {
+  margin: 0;
+}
+
+.post__name {
   display: inline-block;
   padding-top: 12px;
-  padding-left: 17px;
   font-weight: bold;
   margin: 0;
 
@@ -23,15 +30,13 @@
   text-transform: uppercase;
 }
 
-.post__description {
-  padding-left: 17px;
+.post__commentary {
   padding-right: 10px;
   margin: 0;
   margin-top: -1px;
 }
 
 .post__like-button {
-  margin-left: 17px;
   margin-top: 25px;
   border: 0;
   position: relative;
@@ -40,7 +45,7 @@
   &::before {
     content: "";
     top: -10px;
-    left: 0;
+    left: 1px;
     height: 12px;
     width: 13px;
     position: absolute;
@@ -49,7 +54,7 @@
 }
 
 .post__like-number {
-  padding-left: 28px;
+  padding-left: 29px;
   text-transform: uppercase;
   font-size: 12px;
   color: @accent;
@@ -57,29 +62,39 @@
 
 @media (min-width: @tablet-width) {
   .post {
-    position: relative;
-    padding: 0 0 30px;
-  }
-
-  .post__user {
-    padding-top: 17px;
-    padding-left: 28px;
-
     &--best {
-      margin-top: 25px;
-    }
-  }
-
-  .post__time {
-    margin-left: 0;
-
-    &--best {
-      margin-top: 25px;
+      margin-bottom: 50px;
     }
   }
 
   .post__description {
-    padding-left: 28px;
+    padding-left: 27px;
+    padding-right: 20px;
+    padding-top: 17px;
+    padding-bottom: 21px;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+
+    &--best {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      min-height: 60px;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+
+  .post__name {
+    padding-top: 0;
+  }
+
+  .post__time {
+    margin-left: 0;
+  }
+
+  .post__commentary {
+    flex-grow: 0;
 
     &--best {
       order: 3;
@@ -88,15 +103,14 @@
   }
 
   .post__like-wrapper {
-    position: absolute;
     display: flex;
-    bottom: 21px;
-    width: 250px;
+    margin-top: auto;
 
     &--best {
-      right: 45px;
-      bottom: 0;
-      top: 43px;
+      margin-top: 1px;
+      margin-left: auto;
+      margin-right: 21px;
+      order: 2;
       width: 100px;
     }
   }
@@ -108,8 +122,8 @@
     margin-right: 0;
 
     &::before {
-      top: -19px;
-      left: 6px;
+      top: -20px;
+      left: -25px;
     }
 
     &--best {
@@ -117,14 +131,14 @@
 
       &::before {
         top: 5px;
-        left: 22px;
+        left: 17px;
       }
     }
   }
 
   .post__like-number {
     padding: 0;
-    padding-left: 28px;
+    padding-left: 0;
 
     &--best {
       padding: 0;
@@ -133,23 +147,15 @@
 }
 
 @media (min-width: @desktop-width) {
-  .post {
+  .post__description {
     &--best {
-      padding: 0 0 25px;
-    }
-  }
-
-  .post__user {
-    &--best {
-      padding-top: 24px;
-      margin-top: 0;
+      min-height: 0;
     }
   }
 
   .post__like-wrapper {
     &--best {
-      right: 51px;
-      top: 25px;
+      margin-right: 32px;
     }
   }
 

@@ -4,7 +4,7 @@
 
 .upload__intro {
   background-color: @main-bg;
-  padding: 23px 32px 42px;
+  padding: 19px 32px 42px;
   line-height: 30px;
   color: @menu;
 }
@@ -21,23 +21,27 @@
   padding: 0 20px;
 }
 
-.upload__icon {
+.upload__menu-button {
   flex-basis: 80px;
   background-color: transparent;
   border: none;
   margin-bottom: 40px;
 
-  & svg {
-    fill: fade(@menu, 30%);
-  }
-
-  &:not(.upload__icon--active):hover svg {
+  &:not(.upload__menu-button--active):hover .upload__icon {
     fill: fade(@menu, 50%);
     cursor: pointer;
   }
 
-  &--active svg {
+  &--active .upload__icon {
     fill: @accent;
+  }
+}
+
+.upload__icon {
+  fill: fade(@menu, 30%);
+
+  &--tablet {
+    display: none;
   }
 }
 
@@ -60,7 +64,7 @@
     left: 20%;
   }
 
-  &--brightness .upload__toggle {
+  &--contrast .upload__toggle {
     left: 50%;
   }
 }
@@ -137,7 +141,7 @@
 
 @media (max-width: @mobile-only) {
   .upload__range--fill,
-  .upload__range--brightness {
+  .upload__range--contrast {
     display: none;
   }
 }
@@ -146,45 +150,63 @@
   .upload__intro {
     font-size: 18px;
     padding-top: 28px;
-    padding-bottom: 70px;
+    padding-bottom: 68px;
   }
 
   .upload__wrapper {
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px 0 10px;
+
+    padding: 40px 0 14px;
   }
 
   .upload__img {
-    margin-left: 20px;
+    margin: 0;
   }
 
   .upload__menu {
-    margin-top: 44px;
-    width: 275px;
+    padding: 0;
+    padding-top: 8px;
+    padding-left: 48px;
+    padding-bottom: 17px;
+    margin: 0;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .upload__menu-button {
+    flex-basis: 0;
+    padding: 0;
+    margin: 0;
+    margin-right: 25px;
+    height: 24px;
+
+    &--active:hover .upload__icon {
+      fill: fade(@menu, 50%);
+      cursor: pointer;
+    }
   }
 
   .upload__icon {
-    display: none;
+    fill: @accent;
 
-    & svg {
-      fill: @accent;
+    &--tablet {
+      display: inline-block;
     }
 
-    &:not(.upload__icon--active):hover svg {
-      fill: @accent;
-    }
-
-    &--active svg {
-      fill: @accent;
+    &--mobile-desktop {
+      display: none;
     }
   }
 
   .upload__range {
     width: 202px;
     position: relative;
-    margin-bottom: 76px;
-    margin-left: 75px;
+    margin-top: 11px;
+    margin-right: 18px;
+    margin-bottom: 60px;
+    margin-left: auto;
 
     &--cut {
       order: 0;
@@ -194,18 +216,22 @@
       }
     }
 
-    &--fill .upload__toggle {
-      left: 13%;
+    &--fill {
+      margin-bottom: 57px;
+
+      & .upload__toggle {
+        left: 13%;
+      }
     }
 
-    &--brightness .upload__toggle {
+    &--contrast .upload__toggle {
       left: 48%;
     }
 
     &::after {
       content: "";
       position: absolute;
-      top: 30px;
+      top: 35px;
       left: -30px;
       height: 1px;
       width: 275px;
@@ -218,7 +244,7 @@
     border: none;
     flex-direction: column;
     padding-top: 25px;
-    padding-left: 41px;
+    padding-left: 47px;
   }
 
   .upload__button {
@@ -246,7 +272,7 @@
   .upload__wrapper {
     box-sizing: border-box;
     background-color: @secondary-bg;
-    padding: 59px 10px 59px 60px;
+    padding: 57px 10px 59px 80px;
     width: 940px;
   }
 
@@ -259,15 +285,31 @@
   }
 
   .upload__menu {
-    padding-right: 21px;
+    padding-top: 0;
+    padding-right: 64px;
+    padding-left: 40px;
     margin: 0;
-    margin-left: auto;
-    width: 410px;
+    margin-left: 50px;
+    width: 398px;
     padding-bottom: 106px;
   }
 
+  .upload__menu-button {
+    margin-right: 10px;
+  }
+
+  .upload__icon {
+    &--mobile-desktop {
+      display: inline-block;
+    }
+
+    &--tablet {
+      display: none;
+    }
+  }
+
   .upload__range {
-    width: 286px;
+    width: 288px;
     margin-top: 19px;
     margin-bottom: 50px;
     margin-left: auto;
@@ -280,7 +322,7 @@
       left: 86%;
     }
 
-    &--brightness .upload__toggle {
+    &--contrast .upload__toggle {
       left: 56%;
     }
 
@@ -294,6 +336,7 @@
     flex-direction: row;
     padding-bottom: 0;
     padding-right: 51px;
+    padding-left: 90px;
   }
 
   .upload__button {

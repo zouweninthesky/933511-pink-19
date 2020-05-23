@@ -25,6 +25,10 @@
   }
 }
 
+.slider__arrow-section {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .slider__dot-section {
     margin-top: 9px;
@@ -42,5 +46,50 @@
 @media (min-width: @desktop-width) {
   .slider__dot-section {
     display: none;
+  }
+
+  .slider__arrow-section {
+    display: block;
+    position: relative;
+  }
+
+  .slider__arrow {
+    position: absolute;
+    top: -180px;
+    left: 0;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+
+    &--left::before,
+    &--right::before {
+      content: "";
+      position: absolute;
+      width: 21px;
+      height: 42px;
+    }
+
+    &--left {
+      &::before {
+        background: url("../img/icon-review-arrow-left.svg");
+      }
+    }
+
+    &--right {
+      left: 920px;
+
+      &::before {
+        background: url("../img/icon-review-arrow-right.svg");
+      }
+    }
   }
 }

@@ -1,3 +1,7 @@
+.gallery {
+  overflow: hidden;
+}
+
 .gallery__intro {
   padding: 45px 40px 49px;
   color: @menu;
@@ -8,7 +12,10 @@
 .gallery__best-img {
   line-height: 0;
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
+  width: 620px;
 
   &::before {
     content: "Панорама дня";
@@ -39,7 +46,7 @@
 .gallery__item {
   width: 280px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 @media (min-width: @tablet-width) {
@@ -50,6 +57,8 @@
   }
 
   .gallery__best-img {
+    width: 700px;
+
     &::before {
       top: 57px;
     }
@@ -81,6 +90,8 @@
   }
 
   .gallery__best-img {
+    width: 1200px;
+
     &::before {
       top: 54px;
     }

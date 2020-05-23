@@ -11,7 +11,7 @@
 .main-nav__logo {
   display: block;
   position: absolute;
-  top: 22px;
+  top: 24px;
   left: 20px;
 
   &:hover .main-nav__logo-image {
@@ -21,6 +21,15 @@
   &:active .main-nav__logo-image {
     opacity: 0.3;
     fill: @main-bg;
+  }
+}
+
+.main-nav__logo-image {
+  fill: @main-bg;
+
+  &--tablet,
+  &--desktop {
+    display: none;
   }
 }
 
@@ -91,8 +100,9 @@
 
 .main-nav__download {
   margin-top: 1px;
-  background: url("../img/iphone-hand-mobile@1x.png") no-repeat, url("../img/bg-back-mobile@1x.jpg") repeat-x;
-  background-position: 0 109px, 0 -67px;
+  background: url("../img/iphone-hand-mobile@1x.png") no-repeat, url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-size: 258px 286px, 320px 462px;
+  background-position: center 109px, center -67px;
   background-color: @download;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -103,7 +113,7 @@
 .main-nav__slogan {
   box-sizing: border-box;
   width: 320px;
-  padding: 20px 45px 33px;
+  padding: 22px 45px 33px;
   color: @main-bg;
   font-size: 24px;
   line-height: 29px;
@@ -117,10 +127,26 @@
     padding: 109px 0 0;
   }
 
+  .main-nav__logo {
+    top: 27px;
+  }
+
+  .main-nav__logo-image {
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: inline-block;
+    }
+  }
+
   .main-nav__download {
     position: relative;
 
     background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+    background-size: 700px 545px, 1200px 729px;
     background-position: -20px 75px, -272px -109px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -150,6 +176,7 @@
     min-height: 853px;
     position: static;
     background: url("../img/iphone-hand-desktop@1x.png") no-repeat, url("../img/bg-back-desktop@1x.jpg");
+    background-size: 1050px 645px, 2560px 853px;
     background-position: 146px 209px, -680px 0;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -162,8 +189,8 @@
   }
 
   .main-nav__wrapper {
-    width: 700px;
-    padding: 0 130px;
+    width: 940px;
+    padding: 0 10px;
     box-shadow: none;
     margin: 0 auto;
     min-height: 110px;
@@ -174,7 +201,18 @@
   .main-nav__logo {
     position: static;
     margin-right: 173px;
-    margin-top: 38px;
+    margin-top: 27px;
+  }
+
+  .main-nav__logo-image {
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: inline-block;
+    }
   }
 
   .main-nav__list {
