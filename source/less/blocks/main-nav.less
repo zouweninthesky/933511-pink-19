@@ -100,8 +100,9 @@
 
 .main-nav__download {
   margin-top: 1px;
-  background: url("../img/iphone-hand-mobile@1x.png") no-repeat, url("../img/bg-back-mobile@1x.jpg") repeat-x;
-  background-position: 0 109px, 0 -67px;
+  background: url("../img/iphone-hand-mobile@1x.png") no-repeat, url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-size: 258px 286px, 320px 462px;
+  background-position: center 109px, center -67px;
   background-color: @download;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -145,6 +146,7 @@
     position: relative;
 
     background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+    background-size: 700px 545px, 1200px 729px;
     background-position: -20px 75px, -272px -109px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -174,6 +176,7 @@
     min-height: 853px;
     position: static;
     background: url("../img/iphone-hand-desktop@1x.png") no-repeat, url("../img/bg-back-desktop@1x.jpg");
+    background-size: 1050px 645px, 2560px 853px;
     background-position: 146px 209px, -680px 0;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
