@@ -7,22 +7,26 @@
     <script src="js/svg4everybody.js"></script>
     <script>svg4everybody();</script>
     <title>PINK</title>
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="main-nav main-nav--index">
         <div class="main-nav__index-wrapper">
         <div class="main-nav__wrapper">
-          <a href=""  class="main-nav__logo">
+          <a href="" class="main-nav__logo">
             <svg class="main-nav__logo-image main-nav__logo-image--mobile" width="75" height="22" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+              <use xlink:href="#logo-pink-white-mobile"></use>
             </svg>
             <svg class="main-nav__logo-image main-nav__logo-image--tablet" width="147" height="40" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
+              <use xlink:href="#logo-pink-white-tablet"></use>
             </svg>
             <svg class="main-nav__logo-image main-nav__logo-image--desktop" width="147" height="40" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+              <use xlink:href="#logo-pink-white-desktop"></use>
             </svg>
           </a>
           <button class="main-nav__toggle visually-hidden">Открыть/закрыть меню</button>
@@ -244,41 +248,41 @@
           </ul>
         </div>
         <div class="contacts__map">
-          <iframe class="contacts__map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1589873893541!5m2!1sen!2sru" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe class="contacts__map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1589873893541!5m2!1sen!2sru" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
       </section>
     </main>
     <footer class="page-footer container page-footer--index">
       <a href="" class="page-footer__logo footer-logo">
         <svg class="page-footer__logo-image page-footer__logo-image--mobile" width="147" height="40" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+          <use xlink:href="#logo-pink-blue-mobile"></use>
         </svg>
         <svg class="page-footer__logo-image page-footer__logo-image--desktop" width="147" height="40" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
+          <use xlink:href="#logo-pink-blue-desktop"></use>
         </svg>
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li>
             <a href="" class="social__item">
-              <svg class="social__icon" width="17px" height="16px"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
-            </a>
-          </li>
-          <li>
-            <a href=""  class="social__item">
-              <svg class="social__icon" width="26px" height="20px"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+              <svg class="social__icon" width="17px" height="16px"><use xlink:href="#icon-twitter"></use></svg>
             </a>
           </li>
           <li>
             <a href="" class="social__item">
-              <svg class="social__icon" width="20px" height="14px"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
+              <svg class="social__icon" width="26px" height="20px"><use xlink:href="#icon-facebook"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a href="" class="social__item">
+              <svg class="social__icon" width="20px" height="14px"><use xlink:href="#icon-youtube"></use></svg>
             </a>
           </li>
         </ul>
       </div>
       <p class="page-footer__developer">Разработано
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__developer-link">
-          <svg class="page-footer__developer-icon" width="15px" height="14px"><use xlink:href="img/sprite.svg#icon-academy"></use></svg>
+          <svg class="page-footer__developer-icon" width="15px" height="14px"><use xlink:href="#logo-htmlacademy"></use></svg>
         </a>
       </p>
     </footer>
