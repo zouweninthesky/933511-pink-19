@@ -52,7 +52,8 @@
   color: @menu;
   font-size: 18px;
   line-height: 30px;
-  padding: 14px 0;
+  vertical-align: center;
+  height: 54px;
   padding-left: 20px;
   border: 2px solid @border;
   margin: 5px 0 6px;
@@ -169,6 +170,7 @@
 
   &--radio {
     margin-bottom: 45px;
+    padding-right: 80px;
   }
 }
 
@@ -300,7 +302,6 @@
     margin: 0;
     margin-left: 22px;
     margin-top: 30px;
-    width: 100%;
     flex-grow: 1;
     background-color: transparent;
     padding-left: 17px;
@@ -376,7 +377,7 @@
     &::after {
       content: "";
       position: absolute;
-      height: 60px;
+      height: 56px;
       width: 60px;
       left: 436px;
       background-color: @border;
@@ -387,14 +388,14 @@
 
   .contest-form__phone-wrapper {
     &::after {
-      top: 30px;
+      top: 31px;
       background-image: url("../img/icon-phone.svg");
     }
   }
 
   .contest-form__email-wrapper {
     &::after {
-      top: 163px;
+      top: 164px;
       background-position: 20px 23px;
       background-image: url("../img/icon-mail.svg");
     }
@@ -491,9 +492,25 @@
   .contest-form__text-input {
     margin-top: 31px;
 
+    &--surname {
+      width: 316px;
+    }
+
+    &--name {
+      width: 355px;
+    }
+
+    &--patronymic {
+      width: 314px;
+    }
+
     &--phone,
     &--email {
       width: 354px;
+    }
+
+    &--phone {
+      margin-right: 70px;
     }
   }
 
@@ -508,16 +525,22 @@
     &--app-used {
       width: 434px;
       margin-top: 30px;
+      margin-bottom: 45px;
       margin-left: 52px;
     }
   }
 
   .contest-form__achievement-wrapper {
+    margin-right: 60px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
     &--whole {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 0 50px 7px;
+      padding: 0 0  7px 48px;
     }
   }
 
@@ -542,15 +565,15 @@
 
   .contest-form__phone-wrapper {
     &::after {
-      left: 313px;
-      top: 32px;
+      left: 315px;
+      top: 33px;
     }
   }
 
   .contest-form__email-wrapper {
     &::after {
-      left: 759px;
-      top: 32px;
+      left: 762px;
+      top: 33px;
     }
   }
 

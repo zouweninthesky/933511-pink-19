@@ -8,20 +8,24 @@
     <script>svg4everybody();</script>
     <title>PINK</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <a href=""  class="main-nav__logo">
+          <a href="" class="main-nav__logo">
             <svg class="main-nav__logo-image main-nav__logo-image--mobile" width="75" height="22" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+              <use xlink:href="#spr-logo-pink-white-mobile"></use>
             </svg>
             <svg class="main-nav__logo-image main-nav__logo-image--tablet" width="147" height="40" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
+              <use xlink:href="#spr-logo-pink-white-tablet"></use>
             </svg>
             <svg class="main-nav__logo-image main-nav__logo-image--desktop" width="147" height="40" aria-hidden="true">
-              <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+              <use xlink:href="#spr-logo-pink-white-desktop"></use>
             </svg>
           </a>
           <button class="main-nav__toggle visually-hidden">Открыть/закрыть меню</button>
@@ -116,7 +120,7 @@
                 <span class="post__time">(20 часов назад)</span>
               </p>
               <p class="post__commentary">Здесь могла быть ваша цитата о высоком и  вечном.</p>
-              <div  class="post__like-wrapper">
+              <div class="post__like-wrapper">
                 <button class="post__like-button"></button>
                 <span class="post__like-number">Нравится: 215</span>
               </div>
@@ -197,11 +201,11 @@
         <div class="upload__menu">
           <button class="upload__menu-button upload__menu-button--active">
             <svg width="48" height="48" class="upload__icon upload__icon--mobile-desktop">
-              <use xlink:href="img/sprite.svg#icon-editor-crop">
-            </svg>
-            <svg  width="24" height="24" class="upload__icon upload__icon--tablet">
-              <use xlink:href="img/sprite.svg#icon-editor-crop">
-            </svg>
+              <use xlink:href="#spr-icon-editor-crop">
+            </use></svg>
+            <svg width="24" height="24" class="upload__icon upload__icon--tablet">
+              <use xlink:href="#spr-icon-editor-crop">
+            </use></svg>
           </button>
           <div class="upload__range upload__range--cut">
             <span class="visually-hidden">Отрегулируйте, насколько обрежется изображение</span>
@@ -209,11 +213,11 @@
           </div>
           <button class="upload__menu-button">
             <svg width="48" height="48" class="upload__icon upload__icon--mobile-desktop">
-              <use xlink:href="img/sprite.svg#icon-editor-fill">
-            </svg>
+              <use xlink:href="#spr-icon-editor-fill">
+            </use></svg>
             <svg width="24" height="24" class="upload__icon upload__icon--tablet">
-              <use xlink:href="img/sprite.svg#icon-editor-fill">
-            </svg>
+              <use xlink:href="#spr-icon-editor-fill">
+            </use></svg>
           </button>
           <div class="upload__range upload__range--fill">
             <span class="visually-hidden">Отрегулируйте, насколько ??? изображение</span>
@@ -221,11 +225,11 @@
           </div>
           <button class="upload__menu-button">
             <svg width="44" height="32" class="upload__icon upload__icon--mobile-desktop">
-              <use xlink:href="img/sprite.svg#icon-editor-contrast">
-            </svg>
+              <use xlink:href="#spr-icon-editor-contrast">
+            </use></svg>
             <svg width="24" height="16" class="upload__icon upload__icon--tablet">
-              <use xlink:href="img/sprite.svg#icon-editor-contrast">
-            </svg>
+              <use xlink:href="#spr-icon-editor-contrast">
+            </use></svg>
           </button>
           <div class="upload__range upload__range--contrast">
             <span class="visually-hidden">Отрегулируйте, насколько контрастным будет изображение</span>
@@ -243,34 +247,34 @@
     <footer class="page-footer container">
       <a href="" class="page-footer__logo">
         <svg class="page-footer__logo-image page-footer__logo-image--mobile" width="147" height="40" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+          <use xlink:href="#spr-logo-pink-blue-mobile"></use>
         </svg>
         <svg class="page-footer__logo-image page-footer__logo-image--desktop" width="147" height="40" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
+          <use xlink:href="#spr-logo-pink-blue-desktop"></use>
         </svg>
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li>
             <a href="" class="social__item">
-              <svg class="social__icon" width="17px" height="16px"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
-            </a>
-          </li>
-          <li>
-            <a href=""  class="social__item">
-              <svg class="social__icon" width="26px" height="20px"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+              <svg class="social__icon" width="17px" height="16px"><use xlink:href="#spr-icon-twitter"></use></svg>
             </a>
           </li>
           <li>
             <a href="" class="social__item">
-              <svg class="social__icon" width="20px" height="14px"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
+              <svg class="social__icon" width="26px" height="20px"><use xlink:href="#spr-icon-facebook"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a href="" class="social__item">
+              <svg class="social__icon" width="20px" height="14px"><use xlink:href="#spr-icon-youtube"></use></svg>
             </a>
           </li>
         </ul>
       </div>
       <p class="page-footer__developer">Разработано
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__developer-link">
-          <svg class="page-footer__developer-icon" width="15px" height="14px"><use xlink:href="img/sprite.svg#icon-academy"></use></svg>
+          <svg class="page-footer__developer-icon" width="15px" height="14px"><use xlink:href="#spr-logo-htmlacademy"></use></svg>
         </a>
       </p>
     </footer>

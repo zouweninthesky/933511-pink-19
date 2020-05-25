@@ -40,25 +40,25 @@
   margin-top: -1px;
 }
 
-.post__like-button {
-  margin-top: 25px;
-  border: 0;
-  position: relative;
-  padding: 0;
+.post__like-wrapper {
+  margin-top: 11px;
+  display: flex;
+}
 
-  &::before {
-    content: "";
-    top: -10px;
-    left: 1px;
-    height: 12px;
-    width: 13px;
-    position: absolute;
-    background: url("../img/icon-heart.svg") no-repeat;
-  }
+.post__like-button {
+  margin-top: 5px;
+  display: block;
+  padding: 0;
+  width: 13px;
+  height: 12px;
+  border: 0;
+  background: url("../img/icon-heart.svg") no-repeat transparent;
+  background-size: contain;
+  cursor: pointer;
 }
 
 .post__like-number {
-  padding-left: 29px;
+  padding-left: 19px;
   text-transform: uppercase;
   font-size: 12px;
   color: @accent;
@@ -99,10 +99,12 @@
 
   .post__commentary {
     flex-grow: 0;
+    min-height: 60px;
 
     &--best {
       order: 3;
       padding-right: 29px;
+      min-height: 50px;
     }
   }
 
@@ -113,9 +115,9 @@
     &--best {
       margin-top: 1px;
       margin-left: auto;
-      margin-right: 21px;
+      margin-right: 9px;
       order: 2;
-      width: 100px;
+      width: 120px;
     }
   }
 
@@ -123,20 +125,11 @@
     order: 10;
     padding: 0;
     margin-left: auto;
-    margin-right: 0;
-
-    &::before {
-      top: -20px;
-      left: -25px;
-    }
+    margin-right: 12px;
 
     &--best {
-      margin: 0;
-
-      &::before {
-        top: 5px;
-        left: 17px;
-      }
+      margin-left: 20px;
+      margin-right: 0;
     }
   }
 
