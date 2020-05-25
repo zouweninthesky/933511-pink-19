@@ -1,5 +1,24 @@
 .download {
-  padding-top: 28px;
+  padding-top: 0;
+  background: url("../img/iphone-hand-mobile@1x.png") no-repeat;
+  background-size: 258px 286px;
+  background-position: 0 108px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+  }
+}
+
+.download__slogan {
+  box-sizing: border-box;
+  width: 280px;
+  padding-top: 21px;
+  color: @main-bg;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: lighter;
+  margin: 0;
+  margin-bottom: 342px;
 }
 
 .download__button {
@@ -77,6 +96,21 @@
     padding-left: 20px;
     padding-top: 30px;
     padding-bottom: 92px;
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-size: 700px 545px;
+    background-position: -20px 75px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-tablet@2x.png");
+    }
+  }
+
+  .download__slogan {
+    font-size: 40px;
+    line-height: 48px;
+    width: 640px;
+    padding: 63px 378px 31px 38px;
+    margin-bottom: 0;
   }
 
   .download__info {
@@ -116,22 +150,39 @@
 
 @media (min-width: @desktop-width) {
   .download {
-    padding-left: 0;
     padding-top: 52px;
-    padding-bottom: 99px;
+    padding-left: 0;
+    padding-bottom: 103px;
+    background: url("../img/iphone-hand-desktop@1x.png") no-repeat;
+    background-size: 1050px 645px;
+    background-position: 20px 101px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+    }
+  }
+
+  .download__slogan {
+    width: 920px;
+    font-size: 50px;
+    line-height: 60px;
+    padding-top: 59px;
+    padding-left: 34px;
+    padding-right: 660px;
+    padding-bottom: 52px;
   }
 
   .download__list {
-    margin-top: 35px;
+    margin-top: 37px;
     margin-bottom: 37px;
   }
 
   .download__button {
     padding-top: 15px;
-    padding-bottom: 17px;
+    padding-bottom: 15px;
     font-size: 21px;
     margin-right: 620px;
-    margin-left: -10px;
+    margin-left: -14px;
   }
 
   .download__item {
