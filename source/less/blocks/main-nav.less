@@ -11,8 +11,8 @@
 .main-nav__logo {
   display: block;
   position: absolute;
-  top: 24px;
-  left: 20px;
+  top: 22px;
+  left: 19px;
 
   &:hover .main-nav__logo-image {
     fill: @accent;
@@ -84,7 +84,7 @@
 .main-nav__link {
   display: block;
   color: @main-bg;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   text-transform: uppercase;
@@ -157,7 +157,7 @@
     position: static;
     background: url("../img/bg-back-desktop@1x.jpg");
     background-size: 2560px 853px;
-    background-position: -680px 0;
+    background-position: -680px 12px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
@@ -170,7 +170,7 @@
 
   .main-nav__wrapper {
     width: 940px;
-    padding: 0 10px;
+    padding: 0 10px 0;
     box-shadow: none;
     margin: 0 auto;
     min-height: 110px;
@@ -181,7 +181,7 @@
   .main-nav__logo {
     position: static;
     margin-right: 171px;
-    margin-top: 31px;
+    margin-top: 27px;
   }
 
   .main-nav__logo-image {
@@ -195,6 +195,10 @@
     }
   }
 
+  .main-nav__toggle {
+    display: none;
+  }
+
   .main-nav__list {
     flex-grow: 2;
     display: flex;
@@ -203,13 +207,13 @@
   }
 
   .main-nav__item {
-    padding: 48px 0 43px;
+    padding: 46px 0 45px;
     box-shadow: none;
   }
 
   .main-nav__link {
     line-height: 18px;
-    font-weight: normal;
+    font-weight: 400;
     text-transform: capitalize;
 
     &:not(.main-nav__link--current):active {

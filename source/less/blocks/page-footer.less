@@ -1,6 +1,6 @@
 .page-footer {
   padding-top: 40px;
-  padding-bottom: 35px;
+  padding-bottom: 37px;
 }
 
 .page-footer__logo {
@@ -23,7 +23,7 @@
 }
 
 .page-footer__social {
-  margin-top: 33px;
+  margin-top: 30px;
 }
 
 .page-footer__developer {
@@ -46,7 +46,7 @@
   height: 40px;
   width: 40px;
   position: relative;
-  top: 16px;
+  top: 18px;
   left: 7px;
   fill: @accent;
 }
@@ -60,26 +60,33 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     padding-top: 27px;
-    padding-bottom: 36px;
+    padding-bottom: 38px;
     display: flex;
     align-items: center;
   }
 
   .page-footer__social {
-    margin: 8px 85px 0 65px;
+    margin: 10px 81px 0 70px;
   }
 
   .page-footer__developer {
     margin: 0;
-    margin-bottom: 16px;
+    margin-bottom: 0;
+    margin-top: 13px;
+    position: relative;
+  }
+
+  .page-footer__developer-icon {
+    top: -7px;
+    left: 98px;
+    position: absolute;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    padding-top: 58px;
+    padding-top: 62px;
     padding-bottom: 71px;
-    justify-content: space-between;
   }
 
   .page-footer__logo-image {
@@ -95,11 +102,17 @@
   .page-footer__social {
     margin: 0;
     margin-top: 12px;
-    margin-left: 11px;
+    margin-left: 227px;
+    margin-right: 220px;
   }
 
   .page-footer__developer {
     font-size: 18px;
-    margin-bottom: 13px;
+    margin-bottom: 6px;
+  }
+
+  .page-footer__developer-icon {
+    top: -5px;
+    left: 122px;
   }
 }

@@ -1,6 +1,6 @@
 .reviews {
   padding-top: 42px;
-  padding-bottom: 5px;
+  padding-bottom: 42px;
   background-color: @main-bg;
   position: relative;
   z-index: 2;
@@ -8,7 +8,7 @@
 
 .reviews__list {
   margin: 0;
-  padding: 0 5px;
+  padding: 0;
   list-style: none;
 }
 
@@ -19,7 +19,7 @@
 .reviews__name {
   margin: 0;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .reviews__text {
@@ -35,6 +35,7 @@
 @media (min-width: @tablet-width) {
   .reviews {
     padding-top: 58px;
+    padding-bottom: 20px;
   }
 
   .reviews__list {
@@ -66,12 +67,12 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    padding-top: 166px;
-    padding-bottom: 15px;
+    padding-top: 167px;
+    padding-bottom: 22px;
   }
 
   .reviews__text {
-    padding: 0 140px;
+    padding: 0 110px;
     position: relative;
 
     &::before {
@@ -81,14 +82,15 @@
       height: 64px;
       left: 50%;
       margin-left: -36px;
-      top: -115px;
+      top: -113px;
       background-image: url("../img/icon-quotes.svg");
     }
   }
 
   .reviews__name {
     font-size: 24px;
-    margin-bottom: 3px;
+    margin-top: 18px;
+    margin-bottom: 2px;
   }
 
   .reviews__info {

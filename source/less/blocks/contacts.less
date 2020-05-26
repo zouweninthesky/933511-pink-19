@@ -1,6 +1,6 @@
 .contacts {
   background-color: @main-bg;
-  padding: 19px 0 0;
+  padding: 18px 0 0;
   color: @menu;
 }
 
@@ -8,6 +8,7 @@
   font-size: 24px;
   line-height: 29px;
   padding-bottom: 10px;
+  font-weight: 300;
 }
 
 .contacts__list {
@@ -18,16 +19,16 @@
 .contacts__label {
   margin: 0;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .contacts__number {
   font-size: 24px;
   line-height: 29px;
-  font-weight: lighter;
+  font-weight: 300;
   color: @accent;
   display: block;
-  margin-bottom: 21px;
+  margin-bottom: 22px;
 }
 
 .contacts__email {
@@ -36,7 +37,7 @@
   margin-bottom: 24px;
   font-size: 24px;
   line-height: 29px;
-  font-weight: lighter;
+  font-weight: 300;
   color: @accent;
 
   &:hover {
@@ -63,7 +64,7 @@
   display: block;
   font-size: 24px;
   line-height: 29px;
-  font-weight: lighter;
+  font-weight: 300;
   color: @accent;
   margin: 0;
   margin-top: 3px;
@@ -72,21 +73,27 @@
 
 .contacts__map {
   position: relative;
+  height: 200px;
+  overflow: hidden;
 
   &::before {
     content: "";
     position: absolute;
     z-index: 2;
-    height: 200px;
-    width: 100%;
     background: url("../img/bg-triangle-white-footer.svg") no-repeat;
-    background-size: contain;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 33px;
+    background-size: 100% 33px;
+    background-position: 50% 0;
   }
 }
 
 .contacts__map-frame {
   height: 200px;
   width: 100%;
+  border: 0;
   background: url("../img/bg-map-mobile@1x.jpg") no-repeat;
   background-size: 320px 645px;
 
@@ -142,8 +149,17 @@
     padding: 0 140px 15px;
   }
 
+  .contacts__map {
+    height: 372px;
+
+    &::before {
+      height: 67px;
+      background-size: 100% 67px;
+    }
+  }
+
   .contacts__map-frame {
-    height: 370px;
+    height: 372px;
     background: url("../img/bg-map-mobile@1x.jpg") no-repeat;
     background-size: 700px 848px;
 
@@ -201,8 +217,18 @@
     padding: 0 10px 0;
   }
 
+  .contacts__map {
+    margin-top: 20px;
+    height: 500px;
+
+    &::before {
+      height: 104px;
+      background-size: 100% 104px;
+    }
+  }
+
   .contacts__map-frame {
-    height: 520px;
+    height: 500px;
     background: url("../img/bg-map-mobile@1x.jpg") no-repeat;
     background-size: 1200px 976px;
 

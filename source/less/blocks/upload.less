@@ -4,7 +4,7 @@
 
 .upload__intro {
   background-color: @main-bg;
-  padding: 19px 32px 42px;
+  padding: 5px 32px 43px;
   line-height: 30px;
   color: @menu;
 }
@@ -50,7 +50,7 @@
   height: 2px;
   background-color: @menu;
   position: relative;
-  margin: -6px auto 33px;
+  margin: -7px auto 33px;
 
   &--cut {
     order: 10;
@@ -98,7 +98,7 @@
   border-radius: 40px;
   padding: 15px 0 16px;
   font-family: inherit;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 18px;
   font-size: 18px;
   background-color: transparent;
@@ -149,7 +149,7 @@
 @media (min-width: @tablet-width) {
   .upload__intro {
     font-size: 18px;
-    padding-top: 28px;
+    padding-top: 26px;
     padding-bottom: 68px;
   }
 
@@ -169,15 +169,15 @@
     padding-left: 48px;
     padding-bottom: 17px;
     margin: 0;
-    width: auto;
+    width: 272px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   .upload__menu-button {
-    width: 48px;
-    height: 48px;
+    width: 24px;
+    height: 24px;
     padding: 0;
     margin: 0;
     margin-right: 25px;
@@ -185,6 +185,11 @@
     &--active:hover .upload__icon {
       fill: fade(@menu, 50%);
       cursor: pointer;
+    }
+
+    &:nth-of-type(2) {
+      position: relative;
+      top: 2px;
     }
   }
 
@@ -260,19 +265,19 @@
 @media (min-width: @desktop-width) {
   .upload {
     background-color: @main-bg;
-    padding-bottom: 28px;
+    padding-bottom: 29px;
   }
 
   .upload__intro {
     padding-top: 0;
-    margin-top: 4px;
-    padding-bottom: 47px;
+    margin-top: 3px;
+    padding-bottom: 48px;
   }
 
   .upload__wrapper {
     box-sizing: border-box;
     background-color: @secondary-bg;
-    padding: 57px 10px 59px 80px;
+    padding: 57px 10px 58px 80px;
     width: 940px;
   }
 
@@ -291,11 +296,30 @@
     margin: 0;
     margin-left: 50px;
     width: 398px;
-    padding-bottom: 106px;
+    padding-bottom: 104px;
   }
 
   .upload__menu-button {
+    width: 48px;
+    height: 48px;
     margin-right: 10px;
+
+    &:first-child {
+      position: relative;
+      top: -4px;
+      left: -1px;
+    }
+
+    &:nth-of-type(2) {
+      position: relative;
+      top: -2px;
+    }
+
+    &:last-of-type {
+      position: relative;
+      top: -3px;
+      left: -1px;
+    }
   }
 
   .upload__icon {
@@ -311,8 +335,13 @@
   .upload__range {
     width: 288px;
     margin-top: 19px;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
     margin-left: auto;
+
+
+    &--fill {
+      margin-bottom: 49px;
+    }
 
     &--cut .upload__toggle {
       left: 24%;
